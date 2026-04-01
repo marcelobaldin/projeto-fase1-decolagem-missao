@@ -7511,69 +7511,69 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=md_0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=687fc741">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Projeto-Fase-I---Decolagem-da-Missao">Projeto Fase I - Decolagem da Missao<a class="anchor-link" href="#Projeto-Fase-I---Decolagem-da-Missao">¶</a></h1><h2 id="FIAP---Ciencias-da-Computacao">FIAP - Ciencias da Computacao<a class="anchor-link" href="#FIAP---Ciencias-da-Computacao">¶</a></h2><p><strong>Aluno:</strong> Marcelo Bastianello Baldin
+<h1 id="Projeto-Fase-I---Decolagem-da-Miss%C3%A3o">Projeto Fase I - Decolagem da Missão<a class="anchor-link" href="#Projeto-Fase-I---Decolagem-da-Miss%C3%A3o">¶</a></h1><h2 id="FIAP---Ci%C3%AAncias-da-Computa%C3%A7%C3%A3o">FIAP - Ciências da Computação<a class="anchor-link" href="#FIAP---Ci%C3%AAncias-da-Computa%C3%A7%C3%A3o">¶</a></h2><p><strong>Aluno:</strong> Marcelo Bastianello Baldin
 <strong>RM:</strong> 568746
 <strong>Disciplina:</strong> Atividade Integradora - Fase I</p>
 <hr/>
-<p>Este notebook contem a simulacao completa do sistema de verificacao pre-decolagem de uma missao espacial, incluindo analise de telemetria, algoritmo de verificacao, calculos energeticos e analise assistida por IA.</p>
+<p>Este notebook contém a simulação completa do sistema de verificação pré-decolagem de uma missão espacial, incluindo análise de telemetria, algoritmo de verificação, cálculos energéticos e análise assistida por IA.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=md_1">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=303d633e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.1-Organizacao-e-Descricao-da-Telemetria">1.1 Organizacao e Descricao da Telemetria<a class="anchor-link" href="#1.1-Organizacao-e-Descricao-da-Telemetria">¶</a></h2><p>A telemetria da missao monitora os seguintes parametros criticos:</p>
+<h2 id="1.1-Organiza%C3%A7%C3%A3o-e-Descri%C3%A7%C3%A3o-da-Telemetria">1.1 Organização e Descrição da Telemetria<a class="anchor-link" href="#1.1-Organiza%C3%A7%C3%A3o-e-Descri%C3%A7%C3%A3o-da-Telemetria">¶</a></h2><p>A telemetria da missão monitora os seguintes parâmetros críticos:</p>
 <table>
 <thead>
 <tr>
 <th>Categoria</th>
-<th>Parametros</th>
+<th>Parâmetros</th>
 <th>Unidade</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Termicos</strong></td>
+<td><strong>Térmicos</strong></td>
 <td>Temperatura interna e externa da nave</td>
 <td>Graus Celsius</td>
 </tr>
 <tr>
 <td><strong>Estruturais</strong></td>
-<td>Integridade estrutural (sensor binario)</td>
-<td>0 = comprometida / 1 = integra</td>
+<td>Integridade estrutural (sensor binário)</td>
+<td>0 = comprometida / 1 = íntegra</td>
 </tr>
 <tr>
-<td><strong>Energeticos</strong></td>
-<td>Nivel de carga dos bancos de energia</td>
+<td><strong>Energéticos</strong></td>
+<td>Nível de carga dos bancos de energia</td>
 <td>Percentual (%)</td>
 </tr>
 <tr>
-<td><strong>Pressao</strong></td>
-<td>Pressao dos tanques principal e reserva</td>
+<td><strong>Pressão</strong></td>
+<td>Pressão dos tanques principal e reserva</td>
 <td>bar</td>
 </tr>
 <tr>
-<td><strong>Modulos</strong></td>
-<td>Navegacao, Comunicacao, Suporte de Vida, Propulsao</td>
+<td><strong>Módulos</strong></td>
+<td>Navegação, Comunicação, Suporte de Vida, Propulsão</td>
 <td>operacional / falha</td>
 </tr>
 </tbody>
 </table>
-<p>Cada parametro possui uma <strong>faixa segura</strong> predefinida. Valores fora dessa faixa indicam risco e podem abortar a decolagem.</p>
+<p>Cada parâmetro possui uma <strong>faixa segura</strong> predefinida. Valores fora dessa faixa indicam risco e podem abortar a decolagem.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=code_2">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b1c26345">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7581,8 +7581,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># ============================================================</span>
-<span class="c1"># 1.1 DADOS DE TELEMETRIA DA MISSAO</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># 1.1 DADOS DE TELEMETRIA DA MISSÃO</span>
 <span class="c1"># ============================================================</span>
 
 <span class="c1"># Dados coletados pelos sensores da nave</span>
@@ -7590,31 +7590,31 @@ a.anchor-link {
     <span class="s2">"Temperatura Interna (C)"</span><span class="p">:</span> <span class="mf">22.5</span><span class="p">,</span>
     <span class="s2">"Temperatura Externa (C)"</span><span class="p">:</span> <span class="o">-</span><span class="mf">45.2</span><span class="p">,</span>
     <span class="s2">"Integridade Estrutural"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">"Nivel de Energia (%)"</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span>
-    <span class="s2">"Pressao Tanque Principal (bar)"</span><span class="p">:</span> <span class="mf">310.5</span><span class="p">,</span>
-    <span class="s2">"Pressao Tanque Reserva (bar)"</span><span class="p">:</span> <span class="mf">295.0</span><span class="p">,</span>
-    <span class="s2">"Modulo Navegacao"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
-    <span class="s2">"Modulo Comunicacao"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
-    <span class="s2">"Modulo Suporte de Vida"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
-    <span class="s2">"Modulo Propulsao"</span><span class="p">:</span> <span class="s2">"operacional"</span>
+    <span class="s2">"Nível de Energia (%)"</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span>
+    <span class="s2">"Pressão Tanque Principal (bar)"</span><span class="p">:</span> <span class="mf">310.5</span><span class="p">,</span>
+    <span class="s2">"Pressão Tanque Reserva (bar)"</span><span class="p">:</span> <span class="mf">295.0</span><span class="p">,</span>
+    <span class="s2">"Módulo Navegação"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
+    <span class="s2">"Módulo Comunicação"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
+    <span class="s2">"Módulo Suporte de Vida"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
+    <span class="s2">"Módulo Propulsão"</span><span class="p">:</span> <span class="s2">"operacional"</span>
 <span class="p">}</span>
 
-<span class="c1"># Faixas seguras para parametros numericos</span>
+<span class="c1"># Faixas seguras para parâmetros numéricos</span>
 <span class="n">faixas_seguras</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"Temperatura Interna (C)"</span><span class="p">:</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
     <span class="s2">"Temperatura Externa (C)"</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
     <span class="s2">"Integridade Estrutural"</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-    <span class="s2">"Nivel de Energia (%)"</span><span class="p">:</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
-    <span class="s2">"Pressao Tanque Principal (bar)"</span><span class="p">:</span> <span class="p">(</span><span class="mi">280</span><span class="p">,</span> <span class="mi">350</span><span class="p">),</span>
-    <span class="s2">"Pressao Tanque Reserva (bar)"</span><span class="p">:</span> <span class="p">(</span><span class="mi">280</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
+    <span class="s2">"Nível de Energia (%)"</span><span class="p">:</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+    <span class="s2">"Pressão Tanque Principal (bar)"</span><span class="p">:</span> <span class="p">(</span><span class="mi">280</span><span class="p">,</span> <span class="mi">350</span><span class="p">),</span>
+    <span class="s2">"Pressão Tanque Reserva (bar)"</span><span class="p">:</span> <span class="p">(</span><span class="mi">280</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="c1"># Lista de modulos criticos que devem estar operacionais</span>
+<span class="c1"># Lista de módulos críticos que devem estar operacionais</span>
 <span class="n">modulos_criticos</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">"Modulo Navegacao"</span><span class="p">,</span>
-    <span class="s2">"Modulo Comunicacao"</span><span class="p">,</span>
-    <span class="s2">"Modulo Suporte de Vida"</span><span class="p">,</span>
-    <span class="s2">"Modulo Propulsao"</span>
+    <span class="s2">"Módulo Navegação"</span><span class="p">,</span>
+    <span class="s2">"Módulo Comunicação"</span><span class="p">,</span>
+    <span class="s2">"Módulo Suporte de Vida"</span><span class="p">,</span>
+    <span class="s2">"Módulo Propulsão"</span>
 <span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Dados de telemetria carregados com sucesso."</span><span class="p">)</span>
@@ -7636,7 +7636,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=code_3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1dd9a57b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7644,15 +7644,15 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># ============================================================</span>
-<span class="c1"># EXIBICAO ORGANIZADA DOS DADOS DE TELEMETRIA</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># EXIBIÇÃO ORGANIZADA DOS DADOS DE TELEMETRIA</span>
 <span class="c1"># ============================================================</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">75</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"            RELATORIO DE TELEMETRIA PRE-DECOLAGEM"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"            RELATÓRIO DE TELEMETRIA PRÉ-DECOLAGEM"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">75</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Parametro'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Valor'</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Faixa Segura'</span><span class="si">:</span><span class="s2">&lt;18</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Status'</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Parâmetro'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Valor'</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Faixa Segura'</span><span class="si">:</span><span class="s2">&lt;18</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Status'</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">75</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">param</span><span class="p">,</span> <span class="p">(</span><span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="p">)</span> <span class="ow">in</span> <span class="n">faixas_seguras</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -7662,7 +7662,7 @@ a.anchor-link {
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">param</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">faixa</span><span class="si">:</span><span class="s2">&lt;18</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">75</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Modulos Criticos'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Status'</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Verificacao'</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Módulos Críticos'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Status'</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Verificação'</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">75</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">modulo</span> <span class="ow">in</span> <span class="n">modulos_criticos</span><span class="p">:</span>
@@ -7684,25 +7684,25 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>===========================================================================
-            RELATORIO DE TELEMETRIA PRE-DECOLAGEM
+            RELATÓRIO DE TELEMETRIA PRÉ-DECOLAGEM
 ===========================================================================
 
-Parametro                              Valor        Faixa Segura       Status
+Parâmetro                              Valor        Faixa Segura       Status
 ---------------------------------------------------------------------------
 Temperatura Interna (C)                22.5         15 a 30            [OK]
 Temperatura Externa (C)                -45.2        -60 a 50           [OK]
 Integridade Estrutural                 1            1 a 1              [OK]
-Nivel de Energia (%)                   92           80 a 100           [OK]
-Pressao Tanque Principal (bar)         310.5        280 a 350          [OK]
-Pressao Tanque Reserva (bar)           295.0        280 a 350          [OK]
+Nível de Energia (%)                   92           80 a 100           [OK]
+Pressão Tanque Principal (bar)         310.5        280 a 350          [OK]
+Pressão Tanque Reserva (bar)           295.0        280 a 350          [OK]
 ---------------------------------------------------------------------------
 
-Modulos Criticos                       Status       Verificacao
+Módulos Críticos                       Status       Verificação
 ---------------------------------------------------------------------------
-Modulo Navegacao                       operacional  [OK]
-Modulo Comunicacao                     operacional  [OK]
-Modulo Suporte de Vida                 operacional  [OK]
-Modulo Propulsao                       operacional  [OK]
+Módulo Navegação                       operacional  [OK]
+Módulo Comunicação                     operacional  [OK]
+Módulo Suporte de Vida                 operacional  [OK]
+Módulo Propulsão                       operacional  [OK]
 ===========================================================================
 </pre>
 </div>
@@ -7710,41 +7710,41 @@ Modulo Propulsao                       operacional  [OK]
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=md_4">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=291b0eac">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.2-Algoritmo-de-Verificacao-(Pseudocodigo-e-Fluxograma)">1.2 Algoritmo de Verificacao (Pseudocodigo e Fluxograma)<a class="anchor-link" href="#1.2-Algoritmo-de-Verificacao-(Pseudocodigo-e-Fluxograma)">¶</a></h2><h3 id="Pseudocodigo">Pseudocodigo<a class="anchor-link" href="#Pseudocodigo">¶</a></h3><pre><code>ALGORITMO VerificacaoPreDecolagem
+<h2 id="1.2-Algoritmo-de-Verifica%C3%A7%C3%A3o-(Pseudoc%C3%B3digo-e-Fluxograma)">1.2 Algoritmo de Verificação (Pseudocódigo e Fluxograma)<a class="anchor-link" href="#1.2-Algoritmo-de-Verifica%C3%A7%C3%A3o-(Pseudoc%C3%B3digo-e-Fluxograma)">¶</a></h2><h3 id="Pseudoc%C3%B3digo">Pseudocódigo<a class="anchor-link" href="#Pseudoc%C3%B3digo">¶</a></h3><pre><code>ALGORITMO VerificaçãoPréDecolagem
 
-INICIO
+INÍCIO
     DEFINIR telemetria &lt;- ler_dados_sensores()
-    DEFINIR faixas_seguras &lt;- carregar_parametros_seguros()
-    DEFINIR modulos_criticos &lt;- ["navegacao", "comunicacao", "suporte_vida", "propulsao"]
+    DEFINIR faixas_seguras &lt;- carregar_parâmetros_seguros()
+    DEFINIR módulos_críticos &lt;- ["navegação", "comunicação", "suporte_vida", "propulsão"]
     DEFINIR problemas &lt;- lista_vazia
 
-    // Verificacao dos parametros numericos
-    PARA CADA parametro EM faixas_seguras:
-        valor &lt;- telemetria[parametro]
-        minimo, maximo &lt;- faixas_seguras[parametro]
+    // Verificação dos parâmetros numéricos
+    PARA CADA parâmetro EM faixas_seguras:
+        valor &lt;- telemetria[parâmetro]
+        mínimo, máximo &lt;- faixas_seguras[parâmetro]
 
-        SE valor &lt; minimo OU valor &gt; maximo ENTAO:
-            ADICIONAR "ALERTA: {parametro} fora da faixa" EM problemas
+        SE valor &lt; mínimo OU valor &gt; máximo ENTÃO:
+            ADICIONAR "ALERTA: {parâmetro} fora da faixa" EM problemas
         FIM SE
     FIM PARA
 
-    // Verificacao dos modulos criticos
-    PARA CADA modulo EM modulos_criticos:
-        SE telemetria[modulo] != "operacional" ENTAO:
-            ADICIONAR "ALERTA: {modulo} nao operacional" EM problemas
+    // Verificação dos módulos críticos
+    PARA CADA módulo EM módulos_críticos:
+        SE telemetria[módulo] != "operacional" ENTÃO:
+            ADICIONAR "ALERTA: {módulo} não operacional" EM problemas
         FIM SE
     FIM PARA
 
-    // Decisao final
-    SE problemas ESTA VAZIA ENTAO:
+    // Decisão final
+    SE problemas ESTÁ VAZIA ENTÃO:
         EXIBIR "RESULTADO: PRONTO PARA DECOLAR"
-    SENAO:
+    SENÃO:
         EXIBIR "RESULTADO: DECOLAGEM ABORTADA"
         PARA CADA problema EM problemas:
             EXIBIR problema
@@ -7752,45 +7752,45 @@ INICIO
     FIM SE
 FIM
 </code></pre>
-<h3 id="Fluxograma-(representacao-textual)">Fluxograma (representacao textual)<a class="anchor-link" href="#Fluxograma-(representacao-textual)">¶</a></h3><pre><code>    +----------------------------+
-    |          INICIO            |
+<h3 id="Fluxograma-(representa%C3%A7%C3%A3o-textual)">Fluxograma (representação textual)<a class="anchor-link" href="#Fluxograma-(representa%C3%A7%C3%A3o-textual)">¶</a></h3><pre><code>    +----------------------------+
+    |          INÍCIO            |
     |    Ler dados de telemetria |
     +-------------+--------------+
                   |
                   v
     +----------------------------+
-    | PARA CADA parametro        |
-    | numerico: valor esta       |
+    | PARA CADA parâmetro        |
+    | numérico: valor está       |
     | dentro da faixa segura?    |
     +--------+----------+--------+
              |          |
-            SIM        NAO
+            SIM        NÃO
              |          |
              v          v
-          [Proximo]  [Registrar alerta]
+          [Próximo]  [Registrar alerta]
              |          |
              +----+-----+
                   |
                   v
     +----------------------------+
-    | PARA CADA modulo critico:  |
+    | PARA CADA módulo crítico:  |
     | status == "operacional"?   |
     +--------+----------+--------+
              |          |
-            SIM        NAO
+            SIM        NÃO
              |          |
              v          v
-          [Proximo]  [Registrar alerta]
+          [Próximo]  [Registrar alerta]
              |          |
              +----+-----+
                   |
                   v
     +----------------------------+
     |    Lista de alertas        |
-    |    esta vazia?             |
+    |    está vazia?             |
     +--------+----------+--------+
              |          |
-            SIM        NAO
+            SIM        NÃO
              |          |
              v          v
     +--------------+  +-----------------+
@@ -7803,17 +7803,17 @@ FIM
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=md_5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3449e894">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.3-Script-Python---Verificacao-de-Decolagem">1.3 Script Python - Verificacao de Decolagem<a class="anchor-link" href="#1.3-Script-Python---Verificacao-de-Decolagem">¶</a></h2><p>Implementacao funcional do algoritmo de verificacao em Python:</p>
+<h2 id="1.3-Script-Python---Verifica%C3%A7%C3%A3o-de-Decolagem">1.3 Script Python - Verificação de Decolagem<a class="anchor-link" href="#1.3-Script-Python---Verifica%C3%A7%C3%A3o-de-Decolagem">¶</a></h2><p>Implementação funcional do algoritmo de verificação em Python:</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=code_6">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d82ba309">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7821,22 +7821,22 @@ FIM
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># ============================================================</span>
-<span class="c1"># 1.3 FUNCAO DE VERIFICACAO PRE-DECOLAGEM</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># 1.3 FUNÇÃO DE VERIFICAÇÃO PRÉ-DECOLAGEM</span>
 <span class="c1"># ============================================================</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">verificar_decolagem</span><span class="p">(</span><span class="n">telemetria</span><span class="p">,</span> <span class="n">faixas_seguras</span><span class="p">,</span> <span class="n">modulos_criticos</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Verifica se todos os parametros da nave estao dentro das faixas seguras</span>
-<span class="sd">    e se todos os modulos criticos estao operacionais.</span>
+<span class="sd">    Verifica se todos os parâmetros da nave estão dentro das faixas seguras</span>
+<span class="sd">    e se todos os módulos críticos estão operacionais.</span>
 
 <span class="sd">    Retorna:</span>
-<span class="sd">        tuple: (decisao: str, problemas: list, verificacoes: list)</span>
+<span class="sd">        tuple: (decisão: str, problemas: list, verificações: list)</span>
 <span class="sd">    """</span>
     <span class="n">problemas</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">verificacoes</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="c1"># Verificacao dos parametros numericos</span>
+    <span class="c1"># Verificação dos parâmetros numéricos</span>
     <span class="k">for</span> <span class="n">parametro</span><span class="p">,</span> <span class="p">(</span><span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="p">)</span> <span class="ow">in</span> <span class="n">faixas_seguras</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">valor</span> <span class="o">=</span> <span class="n">telemetria</span><span class="p">[</span><span class="n">parametro</span><span class="p">]</span>
         <span class="n">dentro_faixa</span> <span class="o">=</span> <span class="n">minimo</span> <span class="o">&lt;=</span> <span class="n">valor</span> <span class="o">&lt;=</span> <span class="n">maximo</span>
@@ -7855,7 +7855,7 @@ FIM
                 <span class="sa">f</span><span class="s2">"(faixa segura: </span><span class="si">{</span><span class="n">minimo</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">maximo</span><span class="si">}</span><span class="s2">)"</span>
             <span class="p">)</span>
 
-    <span class="c1"># Verificacao dos modulos criticos</span>
+    <span class="c1"># Verificação dos módulos críticos</span>
     <span class="k">for</span> <span class="n">modulo</span> <span class="ow">in</span> <span class="n">modulos_criticos</span><span class="p">:</span>
         <span class="n">status</span> <span class="o">=</span> <span class="n">telemetria</span><span class="p">[</span><span class="n">modulo</span><span class="p">]</span>
         <span class="n">operacional</span> <span class="o">=</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">"operacional"</span>
@@ -7869,9 +7869,9 @@ FIM
         <span class="p">})</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">operacional</span><span class="p">:</span>
-            <span class="n">problemas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ALERTA: </span><span class="si">{</span><span class="n">modulo</span><span class="si">}</span><span class="s2"> esta com status '</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">'"</span><span class="p">)</span>
+            <span class="n">problemas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ALERTA: </span><span class="si">{</span><span class="n">modulo</span><span class="si">}</span><span class="s2"> está com status '</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">'"</span><span class="p">)</span>
 
-    <span class="c1"># Decisao final</span>
+    <span class="c1"># Decisão final</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">problemas</span><span class="p">:</span>
         <span class="n">decisao</span> <span class="o">=</span> <span class="s2">"PRONTO PARA DECOLAR"</span>
     <span class="k">else</span><span class="p">:</span>
@@ -7879,7 +7879,7 @@ FIM
 
     <span class="k">return</span> <span class="n">decisao</span><span class="p">,</span> <span class="n">problemas</span><span class="p">,</span> <span class="n">verificacoes</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Funcao de verificacao definida com sucesso."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Função de verificação definida com sucesso."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7892,13 +7892,13 @@ FIM
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Funcao de verificacao definida com sucesso.
+<pre>Função de verificação definida com sucesso.
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=code_7">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=08f5654e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7906,8 +7906,8 @@ FIM
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># ============================================================</span>
-<span class="c1"># EXECUCAO DA VERIFICACAO PRE-DECOLAGEM - CENARIO NORMAL</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># EXECUÇÃO DA VERIFICAÇÃO PRÉ-DECOLAGEM - CENÁRIO NORMAL</span>
 <span class="c1"># ============================================================</span>
 
 <span class="n">decisao</span><span class="p">,</span> <span class="n">problemas</span><span class="p">,</span> <span class="n">verificacoes</span> <span class="o">=</span> <span class="n">verificar_decolagem</span><span class="p">(</span>
@@ -7915,11 +7915,11 @@ FIM
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"       SISTEMA DE VERIFICACAO PRE-DECOLAGEM"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"              Cenario: Dados Normais"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"       SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"              Cenário: Dados Normais"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Verificacao'</span><span class="si">:</span><span class="s2">&lt;40</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Resultado'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Verificação'</span><span class="si">:</span><span class="s2">&lt;40</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Resultado'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">55</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">verificacoes</span><span class="p">:</span>
@@ -7929,10 +7929,10 @@ FIM
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> <span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">decisao</span> <span class="o">==</span> <span class="s2">"PRONTO PARA DECOLAR"</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; DECISAO FINAL: </span><span class="si">{</span><span class="n">decisao</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; DECISÃO FINAL: </span><span class="si">{</span><span class="n">decisao</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"    Todos os sistemas operacionais. Decolagem autorizada."</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; DECISAO FINAL: </span><span class="si">{</span><span class="n">decisao</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; DECISÃO FINAL: </span><span class="si">{</span><span class="n">decisao</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"    Problemas detectados:"</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">problemas</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"    -&gt; </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -7951,26 +7951,26 @@ FIM
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>======================================================================
-       SISTEMA DE VERIFICACAO PRE-DECOLAGEM
-              Cenario: Dados Normais
+       SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM
+              Cenário: Dados Normais
 ======================================================================
 
-Verificacao                              Resultado 
+Verificação                              Resultado 
 -------------------------------------------------------
   Temperatura Interna (C)                [OK]
   Temperatura Externa (C)                [OK]
   Integridade Estrutural                 [OK]
-  Nivel de Energia (%)                   [OK]
-  Pressao Tanque Principal (bar)         [OK]
-  Pressao Tanque Reserva (bar)           [OK]
-  Modulo Navegacao                       [OK]
-  Modulo Comunicacao                     [OK]
-  Modulo Suporte de Vida                 [OK]
-  Modulo Propulsao                       [OK]
+  Nível de Energia (%)                   [OK]
+  Pressão Tanque Principal (bar)         [OK]
+  Pressão Tanque Reserva (bar)           [OK]
+  Módulo Navegação                       [OK]
+  Módulo Comunicação                     [OK]
+  Módulo Suporte de Vida                 [OK]
+  Módulo Propulsão                       [OK]
 
 ======================================================================
 
-&gt;&gt;&gt; DECISAO FINAL: PRONTO PARA DECOLAR
+&gt;&gt;&gt; DECISÃO FINAL: PRONTO PARA DECOLAR
     Todos os sistemas operacionais. Decolagem autorizada.
 
 ======================================================================
@@ -7980,17 +7980,17 @@ Verificacao                              Resultado
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=md_8">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=46740ad9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Teste-com-cenario-de-anomalia">Teste com cenario de anomalia<a class="anchor-link" href="#Teste-com-cenario-de-anomalia">¶</a></h3><p>Para validar o algoritmo, simulamos um cenario com parametros fora da faixa segura:</p>
+<h3 id="Teste-com-cen%C3%A1rio-de-anomalia">Teste com cenário de anomalia<a class="anchor-link" href="#Teste-com-cen%C3%A1rio-de-anomalia">¶</a></h3><p>Para validar o algoritmo, simulamos um cenário com parâmetros fora da faixa segura:</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=code_9">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1451f0f5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7998,21 +7998,21 @@ Verificacao                              Resultado
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># ============================================================</span>
-<span class="c1"># TESTE COM CENARIO DE ANOMALIA</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># TESTE COM CENÁRIO DE ANOMALIA</span>
 <span class="c1"># ============================================================</span>
 
 <span class="n">telemetria_anomala</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"Temperatura Interna (C)"</span><span class="p">:</span> <span class="mf">35.8</span><span class="p">,</span>       <span class="c1"># ACIMA da faixa (max: 30)</span>
+    <span class="s2">"Temperatura Interna (C)"</span><span class="p">:</span> <span class="mf">35.8</span><span class="p">,</span>       <span class="c1"># ACIMA da faixa (máx: 30)</span>
     <span class="s2">"Temperatura Externa (C)"</span><span class="p">:</span> <span class="o">-</span><span class="mf">45.2</span><span class="p">,</span>
     <span class="s2">"Integridade Estrutural"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">"Nivel de Energia (%)"</span><span class="p">:</span> <span class="mi">72</span><span class="p">,</span>              <span class="c1"># ABAIXO da faixa (min: 80)</span>
-    <span class="s2">"Pressao Tanque Principal (bar)"</span><span class="p">:</span> <span class="mf">310.5</span><span class="p">,</span>
-    <span class="s2">"Pressao Tanque Reserva (bar)"</span><span class="p">:</span> <span class="mf">270.0</span><span class="p">,</span>   <span class="c1"># ABAIXO da faixa (min: 280)</span>
-    <span class="s2">"Modulo Navegacao"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
-    <span class="s2">"Modulo Comunicacao"</span><span class="p">:</span> <span class="s2">"falha"</span><span class="p">,</span>            <span class="c1"># MODULO COM FALHA</span>
-    <span class="s2">"Modulo Suporte de Vida"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
-    <span class="s2">"Modulo Propulsao"</span><span class="p">:</span> <span class="s2">"operacional"</span>
+    <span class="s2">"Nível de Energia (%)"</span><span class="p">:</span> <span class="mi">72</span><span class="p">,</span>              <span class="c1"># ABAIXO da faixa (mín: 80)</span>
+    <span class="s2">"Pressão Tanque Principal (bar)"</span><span class="p">:</span> <span class="mf">310.5</span><span class="p">,</span>
+    <span class="s2">"Pressão Tanque Reserva (bar)"</span><span class="p">:</span> <span class="mf">270.0</span><span class="p">,</span>   <span class="c1"># ABAIXO da faixa (mín: 280)</span>
+    <span class="s2">"Módulo Navegação"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
+    <span class="s2">"Módulo Comunicação"</span><span class="p">:</span> <span class="s2">"falha"</span><span class="p">,</span>            <span class="c1"># MÓDULO COM FALHA</span>
+    <span class="s2">"Módulo Suporte de Vida"</span><span class="p">:</span> <span class="s2">"operacional"</span><span class="p">,</span>
+    <span class="s2">"Módulo Propulsão"</span><span class="p">:</span> <span class="s2">"operacional"</span>
 <span class="p">}</span>
 
 <span class="n">decisao2</span><span class="p">,</span> <span class="n">problemas2</span><span class="p">,</span> <span class="n">verificacoes2</span> <span class="o">=</span> <span class="n">verificar_decolagem</span><span class="p">(</span>
@@ -8020,11 +8020,11 @@ Verificacao                              Resultado
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"       SISTEMA DE VERIFICACAO PRE-DECOLAGEM"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"           Cenario: Dados com Anomalias"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"       SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"           Cenário: Dados com Anomalias"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Verificacao'</span><span class="si">:</span><span class="s2">&lt;40</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Resultado'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Verificação'</span><span class="si">:</span><span class="s2">&lt;40</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Resultado'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">55</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">verificacoes2</span><span class="p">:</span>
@@ -8034,9 +8034,9 @@ Verificacao                              Resultado
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> <span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">decisao2</span> <span class="o">==</span> <span class="s2">"PRONTO PARA DECOLAR"</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; DECISAO FINAL: </span><span class="si">{</span><span class="n">decisao2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; DECISÃO FINAL: </span><span class="si">{</span><span class="n">decisao2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; DECISAO FINAL: </span><span class="si">{</span><span class="n">decisao2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">&gt;&gt;&gt; DECISÃO FINAL: </span><span class="si">{</span><span class="n">decisao2</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"    Problemas detectados:"</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">problemas2</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"    -&gt; </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -8055,31 +8055,31 @@ Verificacao                              Resultado
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>======================================================================
-       SISTEMA DE VERIFICACAO PRE-DECOLAGEM
-           Cenario: Dados com Anomalias
+       SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM
+           Cenário: Dados com Anomalias
 ======================================================================
 
-Verificacao                              Resultado 
+Verificação                              Resultado 
 -------------------------------------------------------
   Temperatura Interna (C)                [FALHA]
   Temperatura Externa (C)                [OK]
   Integridade Estrutural                 [OK]
-  Nivel de Energia (%)                   [FALHA]
-  Pressao Tanque Principal (bar)         [OK]
-  Pressao Tanque Reserva (bar)           [FALHA]
-  Modulo Navegacao                       [OK]
-  Modulo Comunicacao                     [FALHA]
-  Modulo Suporte de Vida                 [OK]
-  Modulo Propulsao                       [OK]
+  Nível de Energia (%)                   [FALHA]
+  Pressão Tanque Principal (bar)         [OK]
+  Pressão Tanque Reserva (bar)           [FALHA]
+  Módulo Navegação                       [OK]
+  Módulo Comunicação                     [FALHA]
+  Módulo Suporte de Vida                 [OK]
+  Módulo Propulsão                       [OK]
 
 ======================================================================
 
-&gt;&gt;&gt; DECISAO FINAL: DECOLAGEM ABORTADA
+&gt;&gt;&gt; DECISÃO FINAL: DECOLAGEM ABORTADA
     Problemas detectados:
     -&gt; ALERTA: Temperatura Interna (C) = 35.8 (faixa segura: 15 a 30)
-    -&gt; ALERTA: Nivel de Energia (%) = 72 (faixa segura: 80 a 100)
-    -&gt; ALERTA: Pressao Tanque Reserva (bar) = 270.0 (faixa segura: 280 a 350)
-    -&gt; ALERTA: Modulo Comunicacao esta com status 'falha'
+    -&gt; ALERTA: Nível de Energia (%) = 72 (faixa segura: 80 a 100)
+    -&gt; ALERTA: Pressão Tanque Reserva (bar) = 270.0 (faixa segura: 280 a 350)
+    -&gt; ALERTA: Módulo Comunicação está com status 'falha'
 
 ======================================================================
 </pre>
@@ -8088,25 +8088,25 @@ Verificacao                              Resultado
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=md_10">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7a0b9e29">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.4-Analise-Energetica">1.4 Analise Energetica<a class="anchor-link" href="#1.4-Analise-Energetica">¶</a></h2><p>Calculo da autonomia inicial da missao, considerando:</p>
+<h2 id="1.4-An%C3%A1lise-Energ%C3%A9tica">1.4 Análise Energética<a class="anchor-link" href="#1.4-An%C3%A1lise-Energ%C3%A9tica">¶</a></h2><p>Cálculo da autonomia inicial da missão, considerando:</p>
 <ul>
 <li><strong>Capacidade total</strong> dos bancos de energia</li>
-<li><strong>Carga atual</strong> no momento da verificacao</li>
+<li><strong>Carga atual</strong> no momento da verificação</li>
 <li><strong>Consumo estimado</strong> durante a fase de decolagem</li>
-<li><strong>Perdas energeticas</strong> por dissipacao termica e entropia (2a Lei da Termodinamica)</li>
+<li><strong>Perdas energéticas</strong> por dissipação térmica e entropia (2ª Lei da Termodinâmica)</li>
 </ul>
-<p>Conforme estudado no Cap. 7 do material, a eficiencia energetica corresponde a razao entre a energia efetivamente aproveitada e o total de energia consumida. O rendimento global (eta) e dado por:</p>
-<p><strong>eta = (Energia util / Energia total consumida) x 100</strong></p>
+<p>Conforme estudado no Cap. 7 do material, a eficiência energética corresponde à razão entre a energia efetivamente aproveitada e o total de energia consumida. O rendimento global (η) é dado por:</p>
+<p><strong>η = (Energia útil / Energia total consumida) × 100</strong></p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=code_11">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a04ea22d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8114,63 +8114,63 @@ Verificacao                              Resultado
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># ============================================================</span>
-<span class="c1"># 1.4 ANALISE ENERGETICA DA MISSAO</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># 1.4 ANÁLISE ENERGÉTICA DA MISSÃO</span>
 <span class="c1"># ============================================================</span>
 
-<span class="c1"># Parametros energeticos da nave</span>
+<span class="c1"># Parâmetros energéticos da nave</span>
 <span class="n">capacidade_total_kwh</span> <span class="o">=</span> <span class="mi">500</span>          <span class="c1"># Capacidade total dos bancos de energia (kWh)</span>
 <span class="n">carga_atual_percent</span> <span class="o">=</span> <span class="mi">92</span>            <span class="c1"># Carga atual (%)</span>
 <span class="n">consumo_decolagem_kwh</span> <span class="o">=</span> <span class="mi">150</span>         <span class="c1"># Consumo estimado na decolagem (kWh)</span>
-<span class="n">taxa_perda_percent</span> <span class="o">=</span> <span class="mi">5</span>              <span class="c1"># Perdas energeticas - dissipacao termica (%)</span>
-<span class="n">consumo_orbita_kwh_h</span> <span class="o">=</span> <span class="mi">12</span>           <span class="c1"># Consumo medio em orbita (kWh/h)</span>
+<span class="n">taxa_perda_percent</span> <span class="o">=</span> <span class="mi">5</span>              <span class="c1"># Perdas energéticas - dissipação térmica (%)</span>
+<span class="n">consumo_orbita_kwh_h</span> <span class="o">=</span> <span class="mi">12</span>           <span class="c1"># Consumo médio em órbita (kWh/h)</span>
 
-<span class="c1"># ---- CALCULOS ----</span>
+<span class="c1"># ---- CÁLCULOS ----</span>
 
-<span class="c1"># 1. Energia disponivel atual</span>
-<span class="c1">#    E_disponivel = Capacidade_total x (Carga_atual / 100)</span>
+<span class="c1"># 1. Energia disponível atual</span>
+<span class="c1">#    E_disponível = Capacidade_total × (Carga_atual / 100)</span>
 <span class="n">energia_disponivel</span> <span class="o">=</span> <span class="n">capacidade_total_kwh</span> <span class="o">*</span> <span class="p">(</span><span class="n">carga_atual_percent</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
 
-<span class="c1"># 2. Perdas energeticas (efeito Joule / entropia)</span>
-<span class="c1">#    Conforme a 2a Lei da Termodinamica (Cap. 7), parte da energia e</span>
-<span class="c1">#    inevitavelmente dissipada como calor durante as conversoes energeticas.</span>
-<span class="c1">#    Em circuitos eletricos: P = I^2 x R (energia dissipada como calor)</span>
+<span class="c1"># 2. Perdas energéticas (efeito Joule / entropia)</span>
+<span class="c1">#    Conforme a 2ª Lei da Termodinâmica (Cap. 7), parte da energia é</span>
+<span class="c1">#    inevitavelmente dissipada como calor durante as conversões energéticas.</span>
+<span class="c1">#    Em circuitos elétricos: P = I² × R (energia dissipada como calor)</span>
 <span class="n">perdas_energeticas</span> <span class="o">=</span> <span class="n">energia_disponivel</span> <span class="o">*</span> <span class="p">(</span><span class="n">taxa_perda_percent</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
 
-<span class="c1"># 3. Energia liquida apos decolagem</span>
-<span class="c1">#    E_liquida = E_disponivel - Consumo_decolagem - Perdas</span>
+<span class="c1"># 3. Energia líquida após decolagem</span>
+<span class="c1">#    E_líquida = E_disponível - Consumo_decolagem - Perdas</span>
 <span class="n">energia_pos_decolagem</span> <span class="o">=</span> <span class="n">energia_disponivel</span> <span class="o">-</span> <span class="n">consumo_decolagem_kwh</span> <span class="o">-</span> <span class="n">perdas_energeticas</span>
 
-<span class="c1"># 4. Autonomia estimada em orbita</span>
-<span class="c1">#    Autonomia = E_liquida / Consumo_medio_por_hora</span>
+<span class="c1"># 4. Autonomia estimada em órbita</span>
+<span class="c1">#    Autonomia = E_líquida / Consumo_médio_por_hora</span>
 <span class="n">autonomia_horas</span> <span class="o">=</span> <span class="n">energia_pos_decolagem</span> <span class="o">/</span> <span class="n">consumo_orbita_kwh_h</span>
 
-<span class="c1"># 5. Rendimento global (eta)</span>
-<span class="c1">#    eta = (Energia util / Energia total) x 100</span>
+<span class="c1"># 5. Rendimento global (η)</span>
+<span class="c1">#    η = (Energia útil / Energia total) × 100</span>
 <span class="n">rendimento</span> <span class="o">=</span> <span class="p">((</span><span class="n">energia_disponivel</span> <span class="o">-</span> <span class="n">perdas_energeticas</span><span class="p">)</span> <span class="o">/</span> <span class="n">energia_disponivel</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 
-<span class="c1"># ---- RELATORIO ----</span>
+<span class="c1"># ---- RELATÓRIO ----</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"            ANALISE ENERGETICA DA MISSAO"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"            ANÁLISE ENERGÉTICA DA MISSÃO"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">PARAMETROS DE ENTRADA:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">PARÂMETROS DE ENTRADA:"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Capacidade total dos bancos:     </span><span class="si">{</span><span class="n">capacidade_total_kwh</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Carga atual:                     </span><span class="si">{</span><span class="n">carga_atual_percent</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Consumo estimado (decolagem):    </span><span class="si">{</span><span class="n">consumo_decolagem_kwh</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Taxa de perdas energeticas:      </span><span class="si">{</span><span class="n">taxa_perda_percent</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Consumo medio em orbita:         </span><span class="si">{</span><span class="n">consumo_orbita_kwh_h</span><span class="si">}</span><span class="s2"> kWh/h"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Taxa de perdas energéticas:      </span><span class="si">{</span><span class="n">taxa_perda_percent</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Consumo médio em órbita:         </span><span class="si">{</span><span class="n">consumo_orbita_kwh_h</span><span class="si">}</span><span class="s2"> kWh/h"</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">CALCULOS:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  1. Energia disponivel:           </span><span class="si">{</span><span class="n">capacidade_total_kwh</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">carga_atual_percent</span><span class="si">}</span><span class="s2">% = </span><span class="si">{</span><span class="n">energia_disponivel</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  2. Perdas energeticas:           </span><span class="si">{</span><span class="n">energia_disponivel</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">taxa_perda_percent</span><span class="si">}</span><span class="s2">% = </span><span class="si">{</span><span class="n">perdas_energeticas</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  3. Energia pos-decolagem:        </span><span class="si">{</span><span class="n">energia_disponivel</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">consumo_decolagem_kwh</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">perdas_energeticas</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">energia_pos_decolagem</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  4. Autonomia em orbita:          </span><span class="si">{</span><span class="n">energia_pos_decolagem</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">consumo_orbita_kwh_h</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">autonomia_horas</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> horas"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  5. Rendimento global (eta):      </span><span class="si">{</span><span class="n">rendimento</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">CÁLCULOS:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  1. Energia disponível:           </span><span class="si">{</span><span class="n">capacidade_total_kwh</span><span class="si">}</span><span class="s2"> × </span><span class="si">{</span><span class="n">carga_atual_percent</span><span class="si">}</span><span class="s2">% = </span><span class="si">{</span><span class="n">energia_disponivel</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  2. Perdas energéticas:           </span><span class="si">{</span><span class="n">energia_disponivel</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> × </span><span class="si">{</span><span class="n">taxa_perda_percent</span><span class="si">}</span><span class="s2">% = </span><span class="si">{</span><span class="n">perdas_energeticas</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  3. Energia pós-decolagem:        </span><span class="si">{</span><span class="n">energia_disponivel</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">consumo_decolagem_kwh</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">perdas_energeticas</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">energia_pos_decolagem</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  4. Autonomia em órbita:          </span><span class="si">{</span><span class="n">energia_pos_decolagem</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">consumo_orbita_kwh_h</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">autonomia_horas</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> horas"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  5. Rendimento global (η):        </span><span class="si">{</span><span class="n">rendimento</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">RESULTADO:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Energia restante pos-decolagem:  </span><span class="si">{</span><span class="n">energia_pos_decolagem</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Energia restante pós-decolagem:  </span><span class="si">{</span><span class="n">energia_pos_decolagem</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> kWh"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Autonomia estimada:              </span><span class="si">{</span><span class="n">autonomia_horas</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> horas (</span><span class="si">{</span><span class="n">autonomia_horas</span><span class="o">/</span><span class="mi">24</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> dias)"</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">autonomia_horas</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
@@ -8194,25 +8194,25 @@ Verificacao                              Resultado
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>======================================================================
-            ANALISE ENERGETICA DA MISSAO
+            ANÁLISE ENERGÉTICA DA MISSÃO
 ======================================================================
 
-PARAMETROS DE ENTRADA:
+PARÂMETROS DE ENTRADA:
   Capacidade total dos bancos:     500 kWh
   Carga atual:                     92%
   Consumo estimado (decolagem):    150 kWh
-  Taxa de perdas energeticas:      5%
-  Consumo medio em orbita:         12 kWh/h
+  Taxa de perdas energéticas:      5%
+  Consumo médio em órbita:         12 kWh/h
 
-CALCULOS:
-  1. Energia disponivel:           500 x 92% = 460.0 kWh
-  2. Perdas energeticas:           460.0 x 5% = 23.0 kWh
-  3. Energia pos-decolagem:        460.0 - 150 - 23.0 = 287.0 kWh
-  4. Autonomia em orbita:          287.0 / 12 = 23.9 horas
-  5. Rendimento global (eta):      95.0%
+CÁLCULOS:
+  1. Energia disponível:           500 × 92% = 460.0 kWh
+  2. Perdas energéticas:           460.0 × 5% = 23.0 kWh
+  3. Energia pós-decolagem:        460.0 - 150 - 23.0 = 287.0 kWh
+  4. Autonomia em órbita:          287.0 / 12 = 23.9 horas
+  5. Rendimento global (η):        95.0%
 
 RESULTADO:
-  Energia restante pos-decolagem:  287.0 kWh
+  Energia restante pós-decolagem:  287.0 kWh
   Autonomia estimada:              23.9 horas (1.0 dias)
   Status:                          AUTONOMIA LIMITADA - monitorar
 
@@ -8223,45 +8223,45 @@ RESULTADO:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=md_12">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=44171914">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.5-Analise-Assistida-por-IA">1.5 Analise Assistida por IA<a class="anchor-link" href="#1.5-Analise-Assistida-por-IA">¶</a></h2><p>Utilizamos uma abordagem de <strong>classificacao</strong> (aprendizado supervisionado, conforme Cap. 6) para categorizar cada parametro de telemetria e identificar possiveis anomalias.</p>
-<p>O sistema classifica os dados em tres categorias:</p>
+<h2 id="1.5-An%C3%A1lise-Assistida-por-IA">1.5 Análise Assistida por IA<a class="anchor-link" href="#1.5-An%C3%A1lise-Assistida-por-IA">¶</a></h2><p>Utilizamos uma abordagem de <strong>classificação</strong> (aprendizado supervisionado, conforme Cap. 6) para categorizar cada parâmetro de telemetria e identificar possíveis anomalias.</p>
+<p>O sistema classifica os dados em três categorias:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Classificacao</th>
-<th>Criterio</th>
-<th>Acao</th>
+<th style="text-align:center">Classificação</th>
+<th>Critério</th>
+<th>Ação</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center"><strong>NORMAL</strong></td>
 <td>Valor entre 15% e 85% da faixa segura</td>
-<td>Nenhuma acao necessaria</td>
+<td>Nenhuma ação necessária</td>
 </tr>
 <tr>
-<td style="text-align:center"><strong>ATENCAO</strong></td>
-<td>Valor proximo aos limites (0-15% ou 85-100%)</td>
+<td style="text-align:center"><strong>ATENÇÃO</strong></td>
+<td>Valor próximo aos limites (0-15% ou 85-100%)</td>
 <td>Monitoramento intensivo</td>
 </tr>
 <tr>
-<td style="text-align:center"><strong>CRITICO</strong></td>
+<td style="text-align:center"><strong>CRÍTICO</strong></td>
 <td>Valor fora da faixa segura</td>
-<td>Intervencao imediata</td>
+<td>Intervenção imediata</td>
 </tr>
 </tbody>
 </table>
-<p>Esta abordagem simula um modelo de classificacao supervisionada, onde as faixas seguras servem como dados de treinamento rotulados (labels) para definir as classes.</p>
+<p>Esta abordagem simula um modelo de classificação supervisionada, onde as faixas seguras servem como dados de treinamento rotulados (labels) para definir as classes.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=code_13">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4b21c9bf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8269,44 +8269,44 @@ RESULTADO:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># ============================================================</span>
-<span class="c1"># 1.5 ANALISE ASSISTIDA POR IA</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># 1.5 ANÁLISE ASSISTIDA POR IA</span>
 <span class="c1"># ============================================================</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">classificar_parametro</span><span class="p">(</span><span class="n">valor</span><span class="p">,</span> <span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Classifica um parametro com base na sua posicao dentro da faixa segura.</span>
-<span class="sd">    Simula um modelo de classificacao supervisionada.</span>
+<span class="sd">    Classifica um parâmetro com base na sua posição dentro da faixa segura.</span>
+<span class="sd">    Simula um modelo de classificação supervisionada.</span>
 
-<span class="sd">    Retorna: 'NORMAL', 'ATENCAO' ou 'CRITICO'</span>
+<span class="sd">    Retorna: 'NORMAL', 'ATENÇÃO' ou 'CRÍTICO'</span>
 <span class="sd">    """</span>
     <span class="k">if</span> <span class="n">valor</span> <span class="o">&lt;</span> <span class="n">minimo</span> <span class="ow">or</span> <span class="n">valor</span> <span class="o">&gt;</span> <span class="n">maximo</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">"CRITICO"</span>
+        <span class="k">return</span> <span class="s2">"CRÍTICO"</span>
 
     <span class="n">faixa</span> <span class="o">=</span> <span class="n">maximo</span> <span class="o">-</span> <span class="n">minimo</span>
-    <span class="k">if</span> <span class="n">faixa</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Parametro binario (ex: integridade)</span>
-        <span class="k">return</span> <span class="s2">"NORMAL"</span> <span class="k">if</span> <span class="n">valor</span> <span class="o">==</span> <span class="n">minimo</span> <span class="k">else</span> <span class="s2">"CRITICO"</span>
+    <span class="k">if</span> <span class="n">faixa</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Parâmetro binário (ex: integridade)</span>
+        <span class="k">return</span> <span class="s2">"NORMAL"</span> <span class="k">if</span> <span class="n">valor</span> <span class="o">==</span> <span class="n">minimo</span> <span class="k">else</span> <span class="s2">"CRÍTICO"</span>
 
     <span class="n">posicao_relativa</span> <span class="o">=</span> <span class="p">(</span><span class="n">valor</span> <span class="o">-</span> <span class="n">minimo</span><span class="p">)</span> <span class="o">/</span> <span class="n">faixa</span>
 
     <span class="k">if</span> <span class="n">posicao_relativa</span> <span class="o">&lt;</span> <span class="mf">0.15</span> <span class="ow">or</span> <span class="n">posicao_relativa</span> <span class="o">&gt;</span> <span class="mf">0.85</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">"ATENCAO"</span>
+        <span class="k">return</span> <span class="s2">"ATENÇÃO"</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">"NORMAL"</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">analise_ia</span><span class="p">(</span><span class="n">telemetria</span><span class="p">,</span> <span class="n">faixas_seguras</span><span class="p">,</span> <span class="n">modulos_criticos</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Realiza analise assistida por IA:</span>
-<span class="sd">    1. Classificacao dos dados</span>
-<span class="sd">    2. Identificacao de anomalias</span>
-<span class="sd">    3. Sugestoes de risco</span>
+<span class="sd">    Realiza análise assistida por IA:</span>
+<span class="sd">    1. Classificação dos dados</span>
+<span class="sd">    2. Identificação de anomalias</span>
+<span class="sd">    3. Sugestões de risco</span>
 <span class="sd">    """</span>
     <span class="n">classificacoes</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">anomalias</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">sugestoes</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="c1"># 1. Classificacao dos parametros numericos</span>
+    <span class="c1"># 1. Classificação dos parâmetros numéricos</span>
     <span class="k">for</span> <span class="n">param</span><span class="p">,</span> <span class="p">(</span><span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="p">)</span> <span class="ow">in</span> <span class="n">faixas_seguras</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">valor</span> <span class="o">=</span> <span class="n">telemetria</span><span class="p">[</span><span class="n">param</span><span class="p">]</span>
         <span class="n">classe</span> <span class="o">=</span> <span class="n">classificar_parametro</span><span class="p">(</span><span class="n">valor</span><span class="p">,</span> <span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="p">)</span>
@@ -8316,54 +8316,54 @@ RESULTADO:
             <span class="s2">"faixa"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">minimo</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">maximo</span><span class="si">}</span><span class="s2">"</span>
         <span class="p">}</span>
 
-        <span class="c1"># 2. Identificacao de anomalias</span>
-        <span class="k">if</span> <span class="n">classe</span> <span class="o">==</span> <span class="s2">"CRITICO"</span><span class="p">:</span>
+        <span class="c1"># 2. Identificação de anomalias</span>
+        <span class="k">if</span> <span class="n">classe</span> <span class="o">==</span> <span class="s2">"CRÍTICO"</span><span class="p">:</span>
             <span class="n">anomalias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
                 <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">param</span><span class="si">}</span><span class="s2">: valor </span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s2"> FORA da faixa segura (</span><span class="si">{</span><span class="n">minimo</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">maximo</span><span class="si">}</span><span class="s2">)"</span>
             <span class="p">)</span>
-        <span class="k">elif</span> <span class="n">classe</span> <span class="o">==</span> <span class="s2">"ATENCAO"</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">classe</span> <span class="o">==</span> <span class="s2">"ATENÇÃO"</span><span class="p">:</span>
             <span class="n">anomalias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">param</span><span class="si">}</span><span class="s2">: valor </span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s2"> PROXIMO ao limite da faixa segura"</span>
+                <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">param</span><span class="si">}</span><span class="s2">: valor </span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s2"> PRÓXIMO ao limite da faixa segura"</span>
             <span class="p">)</span>
 
-    <span class="c1"># Classificacao dos modulos</span>
+    <span class="c1"># Classificação dos módulos</span>
     <span class="k">for</span> <span class="n">modulo</span> <span class="ow">in</span> <span class="n">modulos_criticos</span><span class="p">:</span>
         <span class="n">status</span> <span class="o">=</span> <span class="n">telemetria</span><span class="p">[</span><span class="n">modulo</span><span class="p">]</span>
-        <span class="n">classe</span> <span class="o">=</span> <span class="s2">"NORMAL"</span> <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">"operacional"</span> <span class="k">else</span> <span class="s2">"CRITICO"</span>
+        <span class="n">classe</span> <span class="o">=</span> <span class="s2">"NORMAL"</span> <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">"operacional"</span> <span class="k">else</span> <span class="s2">"CRÍTICO"</span>
         <span class="n">classificacoes</span><span class="p">[</span><span class="n">modulo</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">"valor"</span><span class="p">:</span> <span class="n">status</span><span class="p">,</span>
             <span class="s2">"classe"</span><span class="p">:</span> <span class="n">classe</span><span class="p">,</span>
             <span class="s2">"faixa"</span><span class="p">:</span> <span class="s2">"operacional"</span>
         <span class="p">}</span>
-        <span class="k">if</span> <span class="n">classe</span> <span class="o">==</span> <span class="s2">"CRITICO"</span><span class="p">:</span>
-            <span class="n">anomalias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">modulo</span><span class="si">}</span><span class="s2">: status '</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">' - NAO OPERACIONAL"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">classe</span> <span class="o">==</span> <span class="s2">"CRÍTICO"</span><span class="p">:</span>
+            <span class="n">anomalias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">modulo</span><span class="si">}</span><span class="s2">: status '</span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">' - NÃO OPERACIONAL"</span><span class="p">)</span>
 
-    <span class="c1"># 3. Sugestoes de risco</span>
-    <span class="n">criticos</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">classificacoes</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s2">"classe"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"CRITICO"</span><span class="p">)</span>
-    <span class="n">atencao</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">classificacoes</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s2">"classe"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"ATENCAO"</span><span class="p">)</span>
+    <span class="c1"># 3. Sugestões de risco</span>
+    <span class="n">criticos</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">classificacoes</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s2">"classe"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"CRÍTICO"</span><span class="p">)</span>
+    <span class="n">atencao</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">classificacoes</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s2">"classe"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"ATENÇÃO"</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">criticos</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[RISCO ALTO] </span><span class="si">{</span><span class="n">criticos</span><span class="si">}</span><span class="s2"> parametro(s) em estado CRITICO"</span><span class="p">)</span>
-        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"  Recomendacao: manutencao corretiva antes de nova tentativa"</span><span class="p">)</span>
+        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[RISCO ALTO] </span><span class="si">{</span><span class="n">criticos</span><span class="si">}</span><span class="s2"> parâmetro(s) em estado CRÍTICO"</span><span class="p">)</span>
+        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"  Recomendação: manutenção corretiva antes de nova tentativa"</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">atencao</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[RISCO MEDIO] </span><span class="si">{</span><span class="n">atencao</span><span class="si">}</span><span class="s2"> parametro(s) em ATENCAO"</span><span class="p">)</span>
-        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"  Recomendacao: verificar tendencia nas proximas leituras"</span><span class="p">)</span>
+        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">"[RISCO MÉDIO] </span><span class="si">{</span><span class="n">atencao</span><span class="si">}</span><span class="s2"> parâmetro(s) em ATENÇÃO"</span><span class="p">)</span>
+        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"  Recomendação: verificar tendência nas próximas leituras"</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">criticos</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">atencao</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"[RISCO BAIXO] Todos os parametros em estado NORMAL"</span><span class="p">)</span>
-        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"  Recomendacao: prosseguir com protocolo padrao de decolagem"</span><span class="p">)</span>
+        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"[RISCO BAIXO] Todos os parâmetros em estado NORMAL"</span><span class="p">)</span>
+        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"  Recomendação: prosseguir com protocolo padrão de decolagem"</span><span class="p">)</span>
 
-    <span class="c1"># Analise de correlacao simples</span>
+    <span class="c1"># Análise de correlação simples</span>
     <span class="n">temp_interna</span> <span class="o">=</span> <span class="n">telemetria</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"Temperatura Interna (C)"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">nivel_energia</span> <span class="o">=</span> <span class="n">telemetria</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"Nivel de Energia (%)"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">nivel_energia</span> <span class="o">=</span> <span class="n">telemetria</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"Nível de Energia (%)"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">temp_interna</span> <span class="o">&gt;</span> <span class="mi">25</span> <span class="ow">and</span> <span class="n">nivel_energia</span> <span class="o">&lt;</span> <span class="mi">85</span><span class="p">:</span>
-        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"[CORRELACAO] Temperatura alta + energia baixa pode indicar"</span><span class="p">)</span>
-        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"  sobrecarga nos sistemas de refrigeracao"</span><span class="p">)</span>
+        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"[CORRELAÇÃO] Temperatura alta + energia baixa pode indicar"</span><span class="p">)</span>
+        <span class="n">sugestoes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"  sobrecarga nos sistemas de refrigeração"</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">classificacoes</span><span class="p">,</span> <span class="n">anomalias</span><span class="p">,</span> <span class="n">sugestoes</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Funcoes de analise IA definidas com sucesso."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Funções de análise IA definidas com sucesso."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8376,13 +8376,13 @@ RESULTADO:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Funcoes de analise IA definidas com sucesso.
+<pre>Funções de análise IA definidas com sucesso.
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=code_14">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7fb53c1a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8390,22 +8390,22 @@ RESULTADO:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># ============================================================</span>
-<span class="c1"># ANALISE IA - CENARIO NORMAL</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># ANÁLISE IA - CENÁRIO NORMAL</span>
 <span class="c1"># ============================================================</span>
 
 <span class="n">classif</span><span class="p">,</span> <span class="n">anom</span><span class="p">,</span> <span class="n">sug</span> <span class="o">=</span> <span class="n">analise_ia</span><span class="p">(</span><span class="n">telemetria</span><span class="p">,</span> <span class="n">faixas_seguras</span><span class="p">,</span> <span class="n">modulos_criticos</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"       ANALISE ASSISTIDA POR IA - CENARIO NORMAL"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"       ANÁLISE ASSISTIDA POR IA - CENÁRIO NORMAL"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">CLASSIFICACAO DOS DADOS:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="s1">'Parametro'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Valor'</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Classe'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">CLASSIFICAÇÃO DOS DADOS:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="s1">'Parâmetro'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Valor'</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Classe'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"  "</span> <span class="o">+</span> <span class="s2">"-"</span> <span class="o">*</span> <span class="mi">62</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">param</span><span class="p">,</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">classif</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">icone</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"NORMAL"</span><span class="p">:</span> <span class="s2">"[N]"</span><span class="p">,</span> <span class="s2">"ATENCAO"</span><span class="p">:</span> <span class="s2">"[A]"</span><span class="p">,</span> <span class="s2">"CRITICO"</span><span class="p">:</span> <span class="s2">"[C]"</span><span class="p">}[</span><span class="n">info</span><span class="p">[</span><span class="s2">"classe"</span><span class="p">]]</span>
+    <span class="n">icone</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"NORMAL"</span><span class="p">:</span> <span class="s2">"[N]"</span><span class="p">,</span> <span class="s2">"ATENÇÃO"</span><span class="p">:</span> <span class="s2">"[A]"</span><span class="p">,</span> <span class="s2">"CRÍTICO"</span><span class="p">:</span> <span class="s2">"[C]"</span><span class="p">}[</span><span class="n">info</span><span class="p">[</span><span class="s2">"classe"</span><span class="p">]]</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">param</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">'valor'</span><span class="p">])</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">icone</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">'classe'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">ANOMALIAS DETECTADAS:"</span><span class="p">)</span>
@@ -8415,7 +8415,7 @@ RESULTADO:
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"  Nenhuma anomalia detectada."</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">SUGESTOES DE RISCO:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">SUGESTÕES DE RISCO:"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sug</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
@@ -8433,29 +8433,29 @@ RESULTADO:
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>======================================================================
-       ANALISE ASSISTIDA POR IA - CENARIO NORMAL
+       ANÁLISE ASSISTIDA POR IA - CENÁRIO NORMAL
 ======================================================================
 
-CLASSIFICACAO DOS DADOS:
-  Parametro                              Valor        Classe    
+CLASSIFICAÇÃO DOS DADOS:
+  Parâmetro                              Valor        Classe    
   --------------------------------------------------------------
   Temperatura Interna (C)                22.5         [N] NORMAL
-  Temperatura Externa (C)                -45.2        [A] ATENCAO
+  Temperatura Externa (C)                -45.2        [A] ATENÇÃO
   Integridade Estrutural                 1            [N] NORMAL
-  Nivel de Energia (%)                   92           [N] NORMAL
-  Pressao Tanque Principal (bar)         310.5        [N] NORMAL
-  Pressao Tanque Reserva (bar)           295.0        [N] NORMAL
-  Modulo Navegacao                       operacional  [N] NORMAL
-  Modulo Comunicacao                     operacional  [N] NORMAL
-  Modulo Suporte de Vida                 operacional  [N] NORMAL
-  Modulo Propulsao                       operacional  [N] NORMAL
+  Nível de Energia (%)                   92           [N] NORMAL
+  Pressão Tanque Principal (bar)         310.5        [N] NORMAL
+  Pressão Tanque Reserva (bar)           295.0        [N] NORMAL
+  Módulo Navegação                       operacional  [N] NORMAL
+  Módulo Comunicação                     operacional  [N] NORMAL
+  Módulo Suporte de Vida                 operacional  [N] NORMAL
+  Módulo Propulsão                       operacional  [N] NORMAL
 
 ANOMALIAS DETECTADAS:
-  -&gt; Temperatura Externa (C): valor -45.2 PROXIMO ao limite da faixa segura
+  -&gt; Temperatura Externa (C): valor -45.2 PRÓXIMO ao limite da faixa segura
 
-SUGESTOES DE RISCO:
-  [RISCO MEDIO] 1 parametro(s) em ATENCAO
-    Recomendacao: verificar tendencia nas proximas leituras
+SUGESTÕES DE RISCO:
+  [RISCO MÉDIO] 1 parâmetro(s) em ATENÇÃO
+    Recomendação: verificar tendência nas próximas leituras
 
 ======================================================================
 </pre>
@@ -8463,7 +8463,7 @@ SUGESTOES DE RISCO:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=code_15">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1499d343">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8471,8 +8471,8 @@ SUGESTOES DE RISCO:
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># ============================================================</span>
-<span class="c1"># ANALISE IA - CENARIO COM ANOMALIAS</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># ANÁLISE IA - CENÁRIO COM ANOMALIAS</span>
 <span class="c1"># ============================================================</span>
 
 <span class="n">classif2</span><span class="p">,</span> <span class="n">anom2</span><span class="p">,</span> <span class="n">sug2</span> <span class="o">=</span> <span class="n">analise_ia</span><span class="p">(</span>
@@ -8480,15 +8480,15 @@ SUGESTOES DE RISCO:
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"     ANALISE ASSISTIDA POR IA - CENARIO COM ANOMALIAS"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"     ANÁLISE ASSISTIDA POR IA - CENÁRIO COM ANOMALIAS"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">CLASSIFICACAO DOS DADOS:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="s1">'Parametro'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Valor'</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Classe'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">CLASSIFICAÇÃO DOS DADOS:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="s1">'Parâmetro'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Valor'</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Classe'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"  "</span> <span class="o">+</span> <span class="s2">"-"</span> <span class="o">*</span> <span class="mi">62</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">param</span><span class="p">,</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">classif2</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">icone</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"NORMAL"</span><span class="p">:</span> <span class="s2">"[N]"</span><span class="p">,</span> <span class="s2">"ATENCAO"</span><span class="p">:</span> <span class="s2">"[A]"</span><span class="p">,</span> <span class="s2">"CRITICO"</span><span class="p">:</span> <span class="s2">"[C]"</span><span class="p">}[</span><span class="n">info</span><span class="p">[</span><span class="s2">"classe"</span><span class="p">]]</span>
+    <span class="n">icone</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"NORMAL"</span><span class="p">:</span> <span class="s2">"[N]"</span><span class="p">,</span> <span class="s2">"ATENÇÃO"</span><span class="p">:</span> <span class="s2">"[A]"</span><span class="p">,</span> <span class="s2">"CRÍTICO"</span><span class="p">:</span> <span class="s2">"[C]"</span><span class="p">}[</span><span class="n">info</span><span class="p">[</span><span class="s2">"classe"</span><span class="p">]]</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">param</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">'valor'</span><span class="p">])</span><span class="si">:</span><span class="s2">&lt;12</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">icone</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">'classe'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">ANOMALIAS DETECTADAS:"</span><span class="p">)</span>
@@ -8498,7 +8498,7 @@ SUGESTOES DE RISCO:
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"  Nenhuma anomalia detectada."</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">SUGESTOES DE RISCO:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">SUGESTÕES DE RISCO:"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sug2</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
@@ -8516,37 +8516,37 @@ SUGESTOES DE RISCO:
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>======================================================================
-     ANALISE ASSISTIDA POR IA - CENARIO COM ANOMALIAS
+     ANÁLISE ASSISTIDA POR IA - CENÁRIO COM ANOMALIAS
 ======================================================================
 
-CLASSIFICACAO DOS DADOS:
-  Parametro                              Valor        Classe    
+CLASSIFICAÇÃO DOS DADOS:
+  Parâmetro                              Valor        Classe    
   --------------------------------------------------------------
-  Temperatura Interna (C)                35.8         [C] CRITICO
-  Temperatura Externa (C)                -45.2        [A] ATENCAO
+  Temperatura Interna (C)                35.8         [C] CRÍTICO
+  Temperatura Externa (C)                -45.2        [A] ATENÇÃO
   Integridade Estrutural                 1            [N] NORMAL
-  Nivel de Energia (%)                   72           [C] CRITICO
-  Pressao Tanque Principal (bar)         310.5        [N] NORMAL
-  Pressao Tanque Reserva (bar)           270.0        [C] CRITICO
-  Modulo Navegacao                       operacional  [N] NORMAL
-  Modulo Comunicacao                     falha        [C] CRITICO
-  Modulo Suporte de Vida                 operacional  [N] NORMAL
-  Modulo Propulsao                       operacional  [N] NORMAL
+  Nível de Energia (%)                   72           [C] CRÍTICO
+  Pressão Tanque Principal (bar)         310.5        [N] NORMAL
+  Pressão Tanque Reserva (bar)           270.0        [C] CRÍTICO
+  Módulo Navegação                       operacional  [N] NORMAL
+  Módulo Comunicação                     falha        [C] CRÍTICO
+  Módulo Suporte de Vida                 operacional  [N] NORMAL
+  Módulo Propulsão                       operacional  [N] NORMAL
 
 ANOMALIAS DETECTADAS:
   -&gt; Temperatura Interna (C): valor 35.8 FORA da faixa segura (15 a 30)
-  -&gt; Temperatura Externa (C): valor -45.2 PROXIMO ao limite da faixa segura
-  -&gt; Nivel de Energia (%): valor 72 FORA da faixa segura (80 a 100)
-  -&gt; Pressao Tanque Reserva (bar): valor 270.0 FORA da faixa segura (280 a 350)
-  -&gt; Modulo Comunicacao: status 'falha' - NAO OPERACIONAL
+  -&gt; Temperatura Externa (C): valor -45.2 PRÓXIMO ao limite da faixa segura
+  -&gt; Nível de Energia (%): valor 72 FORA da faixa segura (80 a 100)
+  -&gt; Pressão Tanque Reserva (bar): valor 270.0 FORA da faixa segura (280 a 350)
+  -&gt; Módulo Comunicação: status 'falha' - NÃO OPERACIONAL
 
-SUGESTOES DE RISCO:
-  [RISCO ALTO] 4 parametro(s) em estado CRITICO
-    Recomendacao: manutencao corretiva antes de nova tentativa
-  [RISCO MEDIO] 1 parametro(s) em ATENCAO
-    Recomendacao: verificar tendencia nas proximas leituras
-  [CORRELACAO] Temperatura alta + energia baixa pode indicar
-    sobrecarga nos sistemas de refrigeracao
+SUGESTÕES DE RISCO:
+  [RISCO ALTO] 4 parâmetro(s) em estado CRÍTICO
+    Recomendação: manutenção corretiva antes de nova tentativa
+  [RISCO MÉDIO] 1 parâmetro(s) em ATENÇÃO
+    Recomendação: verificar tendência nas próximas leituras
+  [CORRELAÇÃO] Temperatura alta + energia baixa pode indicar
+    sobrecarga nos sistemas de refrigeração
 
 ======================================================================
 </pre>
@@ -8555,22 +8555,328 @@ SUGESTOES DE RISCO:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=md_16">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e33cb45e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.6-Reflexao-Critica">1.6 Reflexao Critica<a class="anchor-link" href="#1.6-Reflexao-Critica">¶</a></h2><h3 id="Etica-e-Responsabilidade">Etica e Responsabilidade<a class="anchor-link" href="#Etica-e-Responsabilidade">¶</a></h3><p>A automacao de decisoes criticas em missoes espaciais levanta questoes eticas fundamentais. Quando um algoritmo decide entre "PRONTO PARA DECOLAR" e "DECOLAGEM ABORTADA", essa decisao impacta diretamente a seguranca de vidas humanas. A responsabilidade nao recai apenas sobre o sistema automatizado, mas sobre toda a cadeia de desenvolvimento: engenheiros que definiram os parametros, cientistas que calibraram os sensores e gestores que aprovaram os limites de tolerancia.</p>
-<p>E essencial que sistemas de verificacao como o desenvolvido neste projeto sejam transparentes e auditaveis. Cada decisao deve ser rastreavel, e os criterios utilizados devem ser publicamente documentados. A confianca em sistemas automatizados deve ser construida com base em testes rigorosos, validacao cruzada e supervisao humana permanente. Conforme estudado no Cap. 8 sobre responsabilidade social empresarial (ISO 26000), os principios de accountability e transparencia se aplicam diretamente ao desenvolvimento de sistemas criticos.</p>
-<h3 id="Impacto-Social-da-Exploracao-Espacial">Impacto Social da Exploracao Espacial<a class="anchor-link" href="#Impacto-Social-da-Exploracao-Espacial">¶</a></h3><p>A exploracao espacial vai alem da fronteira cientifica: ela gera impactos sociais profundos. Tecnologias desenvolvidas para missoes espaciais frequentemente sao transferidas para aplicacoes terrestres, como sistemas de purificacao de agua, materiais avancados para a medicina e algoritmos de previsao climatica.</p>
-<p>Ao mesmo tempo, e necessario refletir sobre a alocacao de recursos. Investimentos em exploracao espacial devem ser equilibrados com as demandas sociais terrestres, como acesso a educacao, saude e saneamento basico. A ciencia da computacao desempenha papel central nesse equilibrio, ao otimizar processos e permitir que os beneficios da exploracao espacial sejam acessiveis a sociedade como um todo.</p>
-<p>O conceito de Triple Bottom Line (People, Planet, Profit), apresentado no Cap. 8, reforça que qualquer empreendimento tecnologico deve considerar nao apenas o lucro, mas tambem o impacto nas pessoas e no planeta.</p>
-<h3 id="Sustentabilidade-Tecnologica">Sustentabilidade Tecnologica<a class="anchor-link" href="#Sustentabilidade-Tecnologica">¶</a></h3><p>Conforme estudado no Cap. 7 (Eficiencia Energetica), a sustentabilidade e um pilar fundamental de qualquer empreendimento tecnologico. Na exploracao espacial, a gestao eficiente da energia nao e apenas uma questao de custo, mas de sobrevivencia da missao.</p>
-<p>Os calculos de autonomia energetica realizados neste projeto demonstram a importancia de considerar perdas por dissipacao termica (2a Lei da Termodinamica) e de dimensionar corretamente os sistemas de energia. Assim como as <strong>smart grids</strong> terrestres equilibram oferta e demanda de energia em tempo real (Souza et al., 2020), os sistemas de uma nave espacial precisam fazer o mesmo em condicoes muito mais restritas.</p>
-<p>A convergencia entre engenharia eletrica, ciencia da computacao e sustentabilidade - tema central da Fase I - se manifesta diretamente na construcao de sistemas espaciais que devem ser energeticamente eficientes, confiaveis e sustentaveis a longo prazo. O principio de Green IT, discutido no Cap. 8, nos lembra que toda tecnologia deve ser concebida considerando seu ciclo de vida completo e seu impacto ambiental.</p>
+<h3 id="1.5.1-Valida%C3%A7%C3%A3o-por-IA-Generativa-(Claude---Anthropic)">1.5.1 Validação por IA Generativa (Claude - Anthropic)<a class="anchor-link" href="#1.5.1-Valida%C3%A7%C3%A3o-por-IA-Generativa-(Claude---Anthropic)">¶</a></h3><p>Além da classificação algorítmica acima, submetemos os dados de telemetria ao modelo de linguagem <strong>Claude (Anthropic)</strong> para obter uma análise independente. O objetivo é simular um cenário real onde um modelo de IA generativa recebe os parâmetros como entrada (input) e retorna um parecer sobre a aptidão para decolagem.</p>
+<p>A seguir, apresentamos <strong>dois cenários</strong> com os dados formatados como prompt de entrada e a resposta do Claude:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fc7e4227">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># 1.5.1 PROMPT PARA IA GENERATIVA - CENÁRIO 1 (NORMAL)</span>
+<span class="c1"># ============================================================</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">formatar_prompt_ia</span><span class="p">(</span><span class="n">dados_telemetria</span><span class="p">,</span> <span class="n">faixas</span><span class="p">,</span> <span class="n">modulos</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Formata os dados de telemetria como um prompt estruturado</span>
+<span class="sd">    para ser enviado a um modelo de IA generativa.</span>
+<span class="sd">    """</span>
+    <span class="n">prompt</span> <span class="o">=</span> <span class="s2">"SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM - ANÁLISE POR IA</span><span class="se">\n</span><span class="s2">"</span>
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"="</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span>
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"Analise os seguintes dados de telemetria da nave espacial</span><span class="se">\n</span><span class="s2">"</span>
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"e classifique se estamos APTOS ou NÃO APTOS para decolagem.</span><span class="se">\n\n</span><span class="s2">"</span>
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"DADOS DE TELEMETRIA (INPUT):</span><span class="se">\n</span><span class="s2">"</span>
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"-"</span> <span class="o">*</span> <span class="mi">40</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+
+    <span class="k">for</span> <span class="n">param</span><span class="p">,</span> <span class="p">(</span><span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span><span class="p">)</span> <span class="ow">in</span> <span class="n">faixas</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">valor</span> <span class="o">=</span> <span class="n">dados_telemetria</span><span class="p">[</span><span class="n">param</span><span class="p">]</span>
+        <span class="n">prompt</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">param</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s2"> (faixa segura: </span><span class="si">{</span><span class="n">minimo</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">maximo</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">"</span>
+
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">MÓDULOS CRÍTICOS:</span><span class="se">\n</span><span class="s2">"</span>
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"-"</span> <span class="o">*</span> <span class="mi">40</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+    <span class="k">for</span> <span class="n">modulo</span> <span class="ow">in</span> <span class="n">modulos</span><span class="p">:</span>
+        <span class="n">prompt</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">modulo</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">dados_telemetria</span><span class="p">[</span><span class="n">modulo</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">Por favor, forneça:</span><span class="se">\n</span><span class="s2">"</span>
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"1. Classificação de cada parâmetro (NORMAL/ATENÇÃO/CRÍTICO)</span><span class="se">\n</span><span class="s2">"</span>
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"2. Decisão final: APTO ou NÃO APTO para decolagem</span><span class="se">\n</span><span class="s2">"</span>
+    <span class="n">prompt</span> <span class="o">+=</span> <span class="s2">"3. Justificativa da decisão</span><span class="se">\n</span><span class="s2">"</span>
+
+    <span class="k">return</span> <span class="n">prompt</span>
+
+<span class="c1"># Gerar e exibir o prompt do Cenário 1</span>
+<span class="n">prompt_normal</span> <span class="o">=</span> <span class="n">formatar_prompt_ia</span><span class="p">(</span><span class="n">telemetria</span><span class="p">,</span> <span class="n">faixas_seguras</span><span class="p">,</span> <span class="n">modulos_criticos</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"  CENÁRIO 1 - PROMPT ENVIADO AO CLAUDE (DADOS NORMAIS)"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prompt_normal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>======================================================================
+  CENÁRIO 1 - PROMPT ENVIADO AO CLAUDE (DADOS NORMAIS)
+======================================================================
+
+SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM - ANÁLISE POR IA
+============================================================
+
+Analise os seguintes dados de telemetria da nave espacial
+e classifique se estamos APTOS ou NÃO APTOS para decolagem.
+
+DADOS DE TELEMETRIA (INPUT):
+----------------------------------------
+  Temperatura Interna (C): 22.5 (faixa segura: 15 a 30)
+  Temperatura Externa (C): -45.2 (faixa segura: -60 a 50)
+  Integridade Estrutural: 1 (faixa segura: 1 a 1)
+  Nível de Energia (%): 92 (faixa segura: 80 a 100)
+  Pressão Tanque Principal (bar): 310.5 (faixa segura: 280 a 350)
+  Pressão Tanque Reserva (bar): 295.0 (faixa segura: 280 a 350)
+
+MÓDULOS CRÍTICOS:
+----------------------------------------
+  Módulo Navegação: operacional
+  Módulo Comunicação: operacional
+  Módulo Suporte de Vida: operacional
+  Módulo Propulsão: operacional
+
+Por favor, forneça:
+1. Classificação de cada parâmetro (NORMAL/ATENÇÃO/CRÍTICO)
+2. Decisão final: APTO ou NÃO APTO para decolagem
+3. Justificativa da decisão
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=908620ce">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Resposta-do-Claude---Cen%C3%A1rio-1-(Dados-Normais)">Resposta do Claude - Cenário 1 (Dados Normais)<a class="anchor-link" href="#Resposta-do-Claude---Cen%C3%A1rio-1-(Dados-Normais)">¶</a></h4><pre><code>ANÁLISE DE TELEMETRIA PRÉ-DECOLAGEM - RESPOSTA DO CLAUDE
+============================================================
+
+1. CLASSIFICAÇÃO DOS PARÂMETROS:
+
+   Temperatura Interna (C): 22.5      → NORMAL
+     Valor centralizado na faixa segura (15-30). Sem preocupações.
+
+   Temperatura Externa (C): -45.2     → ATENÇÃO
+     Valor dentro da faixa (-60 a 50), porém próximo ao limite
+     inferior. Recomendo monitoramento contínuo.
+
+   Integridade Estrutural: 1           → NORMAL
+     Estrutura íntegra. Nenhuma ação necessária.
+
+   Nível de Energia (%): 92            → NORMAL
+     Carga em 92%, bem acima do mínimo de 80%. Adequado.
+
+   Pressão Tanque Principal (bar): 310.5 → NORMAL
+     Pressão estável dentro da faixa (280-350).
+
+   Pressão Tanque Reserva (bar): 295.0 → NORMAL
+     Pressão adequada dentro da faixa (280-350).
+
+   Módulo Navegação: operacional       → NORMAL
+   Módulo Comunicação: operacional     → NORMAL
+   Módulo Suporte de Vida: operacional → NORMAL
+   Módulo Propulsão: operacional       → NORMAL
+
+2. DECISÃO FINAL: ✅ APTO PARA DECOLAGEM
+
+3. JUSTIFICATIVA:
+   Todos os parâmetros numéricos estão dentro das faixas seguras
+   estabelecidas. Todos os módulos críticos estão operacionais.
+   O único ponto de atenção é a temperatura externa (-45.2°C),
+   que está funcional mas próxima ao limite inferior da faixa.
+   Recomendo manter monitoramento térmico ativo, mas não há
+   impedimento para a decolagem.
+
+   Nível de confiança da decisão: 95%
+</code></pre>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0aacb038">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
+<span class="c1"># 1.5.1 PROMPT PARA IA GENERATIVA - CENÁRIO 2 (ANOMALIAS)</span>
+<span class="c1"># ============================================================</span>
+
+<span class="c1"># Gerar e exibir o prompt do Cenário 2</span>
+<span class="n">prompt_anomalo</span> <span class="o">=</span> <span class="n">formatar_prompt_ia</span><span class="p">(</span><span class="n">telemetria_anomala</span><span class="p">,</span> <span class="n">faixas_seguras</span><span class="p">,</span> <span class="n">modulos_criticos</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"  CENÁRIO 2 - PROMPT ENVIADO AO CLAUDE (DADOS COM ANOMALIAS)"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prompt_anomalo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>======================================================================
+  CENÁRIO 2 - PROMPT ENVIADO AO CLAUDE (DADOS COM ANOMALIAS)
+======================================================================
+
+SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM - ANÁLISE POR IA
+============================================================
+
+Analise os seguintes dados de telemetria da nave espacial
+e classifique se estamos APTOS ou NÃO APTOS para decolagem.
+
+DADOS DE TELEMETRIA (INPUT):
+----------------------------------------
+  Temperatura Interna (C): 35.8 (faixa segura: 15 a 30)
+  Temperatura Externa (C): -45.2 (faixa segura: -60 a 50)
+  Integridade Estrutural: 1 (faixa segura: 1 a 1)
+  Nível de Energia (%): 72 (faixa segura: 80 a 100)
+  Pressão Tanque Principal (bar): 310.5 (faixa segura: 280 a 350)
+  Pressão Tanque Reserva (bar): 270.0 (faixa segura: 280 a 350)
+
+MÓDULOS CRÍTICOS:
+----------------------------------------
+  Módulo Navegação: operacional
+  Módulo Comunicação: falha
+  Módulo Suporte de Vida: operacional
+  Módulo Propulsão: operacional
+
+Por favor, forneça:
+1. Classificação de cada parâmetro (NORMAL/ATENÇÃO/CRÍTICO)
+2. Decisão final: APTO ou NÃO APTO para decolagem
+3. Justificativa da decisão
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c21daa8a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Resposta-do-Claude---Cen%C3%A1rio-2-(Dados-com-Anomalias)">Resposta do Claude - Cenário 2 (Dados com Anomalias)<a class="anchor-link" href="#Resposta-do-Claude---Cen%C3%A1rio-2-(Dados-com-Anomalias)">¶</a></h4><pre><code>ANÁLISE DE TELEMETRIA PRÉ-DECOLAGEM - RESPOSTA DO CLAUDE
+============================================================
+
+1. CLASSIFICAÇÃO DOS PARÂMETROS:
+
+   Temperatura Interna (C): 35.8      → CRÍTICO ⚠️
+     Valor ACIMA do limite superior (30°C). A temperatura interna
+     elevada pode comprometer equipamentos e a segurança da tripulação.
+
+   Temperatura Externa (C): -45.2     → ATENÇÃO
+     Dentro da faixa, mas próximo ao limite inferior.
+
+   Integridade Estrutural: 1           → NORMAL
+     Estrutura íntegra.
+
+   Nível de Energia (%): 72            → CRÍTICO ⚠️
+     ABAIXO do mínimo exigido (80%). Energia insuficiente para
+     garantir autonomia segura durante e após a decolagem.
+
+   Pressão Tanque Principal (bar): 310.5 → NORMAL
+     Pressão estável dentro da faixa.
+
+   Pressão Tanque Reserva (bar): 270.0 → CRÍTICO ⚠️
+     ABAIXO do limite mínimo (280 bar). O tanque reserva com
+     pressão insuficiente compromete a redundância do sistema.
+
+   Módulo Navegação: operacional       → NORMAL
+   Módulo Comunicação: falha           → CRÍTICO ⚠️
+     Módulo de comunicação inoperante. Impossível manter contato
+     com o controle da missão.
+   Módulo Suporte de Vida: operacional → NORMAL
+   Módulo Propulsão: operacional       → NORMAL
+
+2. DECISÃO FINAL: ❌ NÃO APTO PARA DECOLAGEM
+
+3. JUSTIFICATIVA:
+   Identificados 4 parâmetros em estado CRÍTICO que impedem a
+   decolagem segura:
+
+   a) Temperatura interna (35.8°C) acima do limite: risco de
+      superaquecimento dos sistemas eletrônicos e desconforto
+      térmico para a tripulação.
+
+   b) Nível de energia (72%) abaixo do mínimo: margem energética
+      insuficiente. Considerando perdas por dissipação térmica
+      (2ª Lei da Termodinâmica), a autonomia pós-decolagem seria
+      criticamente baixa.
+
+   c) Pressão do tanque reserva (270 bar) abaixo do mínimo:
+      compromete a redundância do sistema de propulsão.
+
+   d) Módulo de comunicação em falha: viola o protocolo de
+      segurança — é obrigatório manter comunicação com o
+      controle da missão durante todas as fases do voo.
+
+   CORRELAÇÃO DETECTADA: A temperatura interna elevada combinada
+   com o nível baixo de energia sugere possível sobrecarga nos
+   sistemas de refrigeração, que estão consumindo mais energia
+   que o previsto.
+
+   RECOMENDAÇÕES:
+   - Ativar protocolo de resfriamento de emergência
+   - Recarregar bancos de energia acima de 80%
+   - Represurizar tanque reserva para ≥ 280 bar
+   - Executar diagnóstico e reparo no módulo de comunicação
+   - Reagendar decolagem após correção de todos os itens
+
+   Nível de confiança da decisão: 99%
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ed14294e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="1.6-Reflex%C3%A3o-Cr%C3%ADtica">1.6 Reflexão Crítica<a class="anchor-link" href="#1.6-Reflex%C3%A3o-Cr%C3%ADtica">¶</a></h2><h3 id="%C3%89tica-e-Responsabilidade">Ética e Responsabilidade<a class="anchor-link" href="#%C3%89tica-e-Responsabilidade">¶</a></h3><p>A automação de decisões críticas em missões espaciais levanta questões éticas fundamentais. Quando um algoritmo decide entre "PRONTO PARA DECOLAR" e "DECOLAGEM ABORTADA", essa decisão impacta diretamente a segurança de vidas humanas. A responsabilidade não recai apenas sobre o sistema automatizado, mas sobre toda a cadeia de desenvolvimento: engenheiros que definiram os parâmetros, cientistas que calibraram os sensores e gestores que aprovaram os limites de tolerância.</p>
+<p>É essencial que sistemas de verificação como o desenvolvido neste projeto sejam transparentes e auditáveis. Cada decisão deve ser rastreável, e os critérios utilizados devem ser publicamente documentados. A confiança em sistemas automatizados deve ser construída com base em testes rigorosos, validação cruzada e supervisão humana permanente. Conforme estudado no Cap. 8 sobre responsabilidade social empresarial (ISO 26000), os princípios de accountability e transparência se aplicam diretamente ao desenvolvimento de sistemas críticos.</p>
+<h3 id="Impacto-Social-da-Explora%C3%A7%C3%A3o-Espacial">Impacto Social da Exploração Espacial<a class="anchor-link" href="#Impacto-Social-da-Explora%C3%A7%C3%A3o-Espacial">¶</a></h3><p>A exploração espacial vai além da fronteira científica: ela gera impactos sociais profundos. Tecnologias desenvolvidas para missões espaciais frequentemente são transferidas para aplicações terrestres, como sistemas de purificação de água, materiais avançados para a medicina e algoritmos de previsão climática.</p>
+<p>Ao mesmo tempo, é necessário refletir sobre a alocação de recursos. Investimentos em exploração espacial devem ser equilibrados com as demandas sociais terrestres, como acesso à educação, saúde e saneamento básico. A ciência da computação desempenha papel central nesse equilíbrio, ao otimizar processos e permitir que os benefícios da exploração espacial sejam acessíveis à sociedade como um todo.</p>
+<p>O conceito de Triple Bottom Line (People, Planet, Profit), apresentado no Cap. 8, reforça que qualquer empreendimento tecnológico deve considerar não apenas o lucro, mas também o impacto nas pessoas e no planeta.</p>
+<h3 id="Sustentabilidade-Tecnol%C3%B3gica">Sustentabilidade Tecnológica<a class="anchor-link" href="#Sustentabilidade-Tecnol%C3%B3gica">¶</a></h3><p>Conforme estudado no Cap. 7 (Eficiência Energética), a sustentabilidade é um pilar fundamental de qualquer empreendimento tecnológico. Na exploração espacial, a gestão eficiente da energia não é apenas uma questão de custo, mas de sobrevivência da missão.</p>
+<p>Os cálculos de autonomia energética realizados neste projeto demonstram a importância de considerar perdas por dissipação térmica (2ª Lei da Termodinâmica) e de dimensionar corretamente os sistemas de energia. Assim como as <strong>smart grids</strong> terrestres equilibram oferta e demanda de energia em tempo real (Souza et al., 2020), os sistemas de uma nave espacial precisam fazer o mesmo em condições muito mais restritas.</p>
+<p>A convergência entre engenharia elétrica, ciência da computação e sustentabilidade — tema central da Fase I — se manifesta diretamente na construção de sistemas espaciais que devem ser energeticamente eficientes, confiáveis e sustentáveis a longo prazo. O princípio de Green IT, discutido no Cap. 8, nos lembra que toda tecnologia deve ser concebida considerando seu ciclo de vida completo e seu impacto ambiental.</p>
 <hr/>
-<p><em>Projeto desenvolvido como parte da Atividade Integradora da Fase I - Decolagem da Missao, Ciencias da Computacao - FIAP (2026)</em></p>
+<p><em>Projeto desenvolvido como parte da Atividade Integradora da Fase I — Decolagem da Missão, Ciências da Computação — FIAP (2026)</em></p>
 </div>
 </div>
 </div>
