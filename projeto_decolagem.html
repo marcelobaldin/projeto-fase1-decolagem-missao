@@ -7578,7 +7578,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -7641,7 +7641,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -7752,53 +7752,16 @@ INÍCIO
     FIM SE
 FIM
 </code></pre>
-<h3 id="Fluxograma-(representa%C3%A7%C3%A3o-textual)">Fluxograma (representação textual)<a class="anchor-link" href="#Fluxograma-(representa%C3%A7%C3%A3o-textual)">¶</a></h3><pre><code>    +----------------------------+
-    |          INÍCIO            |
-    |    Ler dados de telemetria |
-    +-------------+--------------+
-                  |
-                  v
-    +----------------------------+
-    | PARA CADA parâmetro        |
-    | numérico: valor está       |
-    | dentro da faixa segura?    |
-    +--------+----------+--------+
-             |          |
-            SIM        NÃO
-             |          |
-             v          v
-          [Próximo]  [Registrar alerta]
-             |          |
-             +----+-----+
-                  |
-                  v
-    +----------------------------+
-    | PARA CADA módulo crítico:  |
-    | status == "operacional"?   |
-    +--------+----------+--------+
-             |          |
-            SIM        NÃO
-             |          |
-             v          v
-          [Próximo]  [Registrar alerta]
-             |          |
-             +----+-----+
-                  |
-                  v
-    +----------------------------+
-    |    Lista de alertas        |
-    |    está vazia?             |
-    +--------+----------+--------+
-             |          |
-            SIM        NÃO
-             |          |
-             v          v
-    +--------------+  +-----------------+
-    | PRONTO PARA  |  | DECOLAGEM       |
-    | DECOLAR      |  | ABORTADA        |
-    +--------------+  | Listar alertas  |
-                      +-----------------+
-</code></pre>
+<h3 id="Fluxograma">Fluxograma<a class="anchor-link" href="#Fluxograma">¶</a></h3><p>O fluxograma abaixo foi gerado com a ferramenta <strong>Graphviz</strong> e representa visualmente o algoritmo de verificação pré-decolagem:</p>
+<p><img alt="Fluxograma de Verificação Pré-Decolagem" src="fluxograma_verificacao.png"/></p>
+<p><strong>Legenda:</strong></p>
+<ul>
+<li><strong>Verde</strong>: Início/Fim e resultados positivos</li>
+<li><strong>Amarelo</strong>: Pontos de decisão (verificações condicionais)</li>
+<li><strong>Vermelho claro</strong>: Registros de falha</li>
+<li><strong>Vermelho escuro</strong>: Decolagem abortada</li>
+<li><strong>Azul claro</strong>: Ações de processamento</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7818,7 +7781,7 @@ FIM
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -7903,7 +7866,7 @@ FIM
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -7919,12 +7882,18 @@ FIM
 <span class="nb">print</span><span class="p">(</span><span class="s2">"              Cenário: Dados Normais"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Verificação'</span><span class="si">:</span><span class="s2">&lt;40</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Resultado'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">55</span><span class="p">)</span>
+<span class="c1"># Tabela comparativa de parâmetros com valores e faixas seguras</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Parâmetro'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Valor'</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="s1">'Faixa Segura'</span><span class="si">:</span><span class="s2">&gt;14</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="s1">'Status'</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">75</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">verificacoes</span><span class="p">:</span>
     <span class="n">simbolo</span> <span class="o">=</span> <span class="s2">"[OK]"</span> <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s2">"status"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"OK"</span> <span class="k">else</span> <span class="s2">"[FALHA]"</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="s1">'parametro'</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">simbolo</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">valor_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">"valor"</span><span class="p">])</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">"minimo"</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">faixa_str</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="s2">"minimo"</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">faixa_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="s1">'minimo'</span><span class="p">]</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="s1">'maximo'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="s1">'parametro'</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;36</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">valor_str</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">faixa_str</span><span class="si">:</span><span class="s2">&gt;14</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">simbolo</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> <span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
@@ -7950,31 +7919,7 @@ FIM
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>======================================================================
-       SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM
-              Cenário: Dados Normais
-======================================================================
-
-Verificação                              Resultado 
--------------------------------------------------------
-  Temperatura Interna (C)                [OK]
-  Temperatura Externa (C)                [OK]
-  Integridade Estrutural                 [OK]
-  Nível de Energia (%)                   [OK]
-  Pressão Tanque Principal (bar)         [OK]
-  Pressão Tanque Reserva (bar)           [OK]
-  Módulo Navegação                       [OK]
-  Módulo Comunicação                     [OK]
-  Módulo Suporte de Vida                 [OK]
-  Módulo Propulsão                       [OK]
-
-======================================================================
-
-&gt;&gt;&gt; DECISÃO FINAL: PRONTO PARA DECOLAR
-    Todos os sistemas operacionais. Decolagem autorizada.
-
-======================================================================
-</pre>
+<pre>======================================================================\n       SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM\n              Cenário: Dados Normais\n======================================================================\n\nParâmetro                                 Valor    Faixa Segura    Status\n---------------------------------------------------------------------------\n  Temperatura Interna (C)                  22.5       15 a 30      [OK]\n  Temperatura Externa (C)                 -45.2      -60 a 50      [OK]\n  Integridade Estrutural                      1        1 a 1      [OK]\n  Nível de Energia (%)                       92     80 a 100      [OK]\n  Pressão Tanque Principal (bar)          310.5    280 a 350      [OK]\n  Pressão Tanque Reserva (bar)            295.0    280 a 350      [OK]\n  Módulo Navegação                  operacional   operacional      [OK]\n  Módulo Comunicação                operacional   operacional      [OK]\n  Módulo Suporte de Vida            operacional   operacional      [OK]\n  Módulo Propulsão                  operacional   operacional      [OK]\n\n======================================================================\n\n&gt;&gt;&gt; DECISÃO FINAL: PRONTO PARA DECOLAR\n    Todos os sistemas operacionais. Decolagem autorizada.\n\n======================================================================\n</pre>
 </div>
 </div>
 </div>
@@ -7995,7 +7940,7 @@ Verificação                              Resultado
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -8024,12 +7969,18 @@ Verificação                              Resultado
 <span class="nb">print</span><span class="p">(</span><span class="s2">"           Cenário: Dados com Anomalias"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Verificação'</span><span class="si">:</span><span class="s2">&lt;40</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Resultado'</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">55</span><span class="p">)</span>
+<span class="c1"># Tabela comparativa de parâmetros com valores e faixas seguras</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="si">{</span><span class="s1">'Parâmetro'</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">'Valor'</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="s1">'Faixa Segura'</span><span class="si">:</span><span class="s2">&gt;14</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="s1">'Status'</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">75</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">verificacoes2</span><span class="p">:</span>
     <span class="n">simbolo</span> <span class="o">=</span> <span class="s2">"[OK]"</span> <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s2">"status"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"OK"</span> <span class="k">else</span> <span class="s2">"[FALHA]"</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="s1">'parametro'</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;38</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">simbolo</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">valor_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">"valor"</span><span class="p">])</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">"minimo"</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">faixa_str</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="s2">"minimo"</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">faixa_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="s1">'minimo'</span><span class="p">]</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="s1">'maximo'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="s1">'parametro'</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;36</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">valor_str</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">faixa_str</span><span class="si">:</span><span class="s2">&gt;14</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">simbolo</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> <span class="s2">"="</span> <span class="o">*</span> <span class="mi">70</span><span class="p">)</span>
 
@@ -8054,35 +8005,7 @@ Verificação                              Resultado
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>======================================================================
-       SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM
-           Cenário: Dados com Anomalias
-======================================================================
-
-Verificação                              Resultado 
--------------------------------------------------------
-  Temperatura Interna (C)                [FALHA]
-  Temperatura Externa (C)                [OK]
-  Integridade Estrutural                 [OK]
-  Nível de Energia (%)                   [FALHA]
-  Pressão Tanque Principal (bar)         [OK]
-  Pressão Tanque Reserva (bar)           [FALHA]
-  Módulo Navegação                       [OK]
-  Módulo Comunicação                     [FALHA]
-  Módulo Suporte de Vida                 [OK]
-  Módulo Propulsão                       [OK]
-
-======================================================================
-
-&gt;&gt;&gt; DECISÃO FINAL: DECOLAGEM ABORTADA
-    Problemas detectados:
-    -&gt; ALERTA: Temperatura Interna (C) = 35.8 (faixa segura: 15 a 30)
-    -&gt; ALERTA: Nível de Energia (%) = 72 (faixa segura: 80 a 100)
-    -&gt; ALERTA: Pressão Tanque Reserva (bar) = 270.0 (faixa segura: 280 a 350)
-    -&gt; ALERTA: Módulo Comunicação está com status 'falha'
-
-======================================================================
-</pre>
+<pre>======================================================================\n       SISTEMA DE VERIFICAÇÃO PRÉ-DECOLAGEM\n           Cenário: Dados com Anomalias\n======================================================================\n\nParâmetro                                 Valor    Faixa Segura    Status\n---------------------------------------------------------------------------\n  Temperatura Interna (C)                  35.8       15 a 30    [FALHA]\n  Temperatura Externa (C)                 -45.2      -60 a 50      [OK]\n  Integridade Estrutural                      1        1 a 1      [OK]\n  Nível de Energia (%)                       72     80 a 100    [FALHA]\n  Pressão Tanque Principal (bar)          310.5    280 a 350      [OK]\n  Pressão Tanque Reserva (bar)            270.0    280 a 350    [FALHA]\n  Módulo Navegação                  operacional   operacional      [OK]\n  Módulo Comunicação                      falha   operacional    [FALHA]\n  Módulo Suporte de Vida            operacional   operacional      [OK]\n  Módulo Propulsão                  operacional   operacional      [OK]\n\n======================================================================\n\n&gt;&gt;&gt; DECISÃO FINAL: DECOLAGEM ABORTADA\n    Problemas detectados:\n    -&gt; ALERTA: Temperatura Interna (C) = 35.8 (faixa segura: 15 a 30)\n    -&gt; ALERTA: Nível de Energia (%) = 72 (faixa segura: 80 a 100)\n    -&gt; ALERTA: Pressão Tanque Reserva (bar) = 270.0 (faixa segura: 280 a 350)\n    -&gt; ALERTA: Módulo Comunicação está com status 'falha'\n\n======================================================================\n</pre>
 </div>
 </div>
 </div>
@@ -8111,7 +8034,7 @@ Verificação                              Resultado
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -8266,7 +8189,7 @@ RESULTADO:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -8387,7 +8310,7 @@ RESULTADO:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -8468,7 +8391,7 @@ SUGESTÕES DE RISCO:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -8571,7 +8494,7 @@ SUGESTÕES DE RISCO:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -8718,7 +8641,7 @@ Por favor, forneça:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ============================================================</span>
@@ -8861,20 +8784,67 @@ Por favor, forneça:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ed14294e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d63a8287">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.6-Reflex%C3%A3o-Cr%C3%ADtica">1.6 Reflexão Crítica<a class="anchor-link" href="#1.6-Reflex%C3%A3o-Cr%C3%ADtica">¶</a></h2><h3 id="%C3%89tica-e-Responsabilidade">Ética e Responsabilidade<a class="anchor-link" href="#%C3%89tica-e-Responsabilidade">¶</a></h3><p>A automação de decisões críticas em missões espaciais levanta questões éticas fundamentais. Quando um algoritmo decide entre "PRONTO PARA DECOLAR" e "DECOLAGEM ABORTADA", essa decisão impacta diretamente a segurança de vidas humanas. A responsabilidade não recai apenas sobre o sistema automatizado, mas sobre toda a cadeia de desenvolvimento: engenheiros que definiram os parâmetros, cientistas que calibraram os sensores e gestores que aprovaram os limites de tolerância.</p>
-<p>É essencial que sistemas de verificação como o desenvolvido neste projeto sejam transparentes e auditáveis. Cada decisão deve ser rastreável, e os critérios utilizados devem ser publicamente documentados. A confiança em sistemas automatizados deve ser construída com base em testes rigorosos, validação cruzada e supervisão humana permanente. Conforme estudado no Cap. 8 sobre responsabilidade social empresarial (ISO 26000), os princípios de accountability e transparência se aplicam diretamente ao desenvolvimento de sistemas críticos.</p>
-<h3 id="Impacto-Social-da-Explora%C3%A7%C3%A3o-Espacial">Impacto Social da Exploração Espacial<a class="anchor-link" href="#Impacto-Social-da-Explora%C3%A7%C3%A3o-Espacial">¶</a></h3><p>A exploração espacial vai além da fronteira científica: ela gera impactos sociais profundos. Tecnologias desenvolvidas para missões espaciais frequentemente são transferidas para aplicações terrestres, como sistemas de purificação de água, materiais avançados para a medicina e algoritmos de previsão climática.</p>
-<p>Ao mesmo tempo, é necessário refletir sobre a alocação de recursos. Investimentos em exploração espacial devem ser equilibrados com as demandas sociais terrestres, como acesso à educação, saúde e saneamento básico. A ciência da computação desempenha papel central nesse equilíbrio, ao otimizar processos e permitir que os benefícios da exploração espacial sejam acessíveis à sociedade como um todo.</p>
-<p>O conceito de Triple Bottom Line (People, Planet, Profit), apresentado no Cap. 8, reforça que qualquer empreendimento tecnológico deve considerar não apenas o lucro, mas também o impacto nas pessoas e no planeta.</p>
-<h3 id="Sustentabilidade-Tecnol%C3%B3gica">Sustentabilidade Tecnológica<a class="anchor-link" href="#Sustentabilidade-Tecnol%C3%B3gica">¶</a></h3><p>Conforme estudado no Cap. 7 (Eficiência Energética), a sustentabilidade é um pilar fundamental de qualquer empreendimento tecnológico. Na exploração espacial, a gestão eficiente da energia não é apenas uma questão de custo, mas de sobrevivência da missão.</p>
-<p>Os cálculos de autonomia energética realizados neste projeto demonstram a importância de considerar perdas por dissipação térmica (2ª Lei da Termodinâmica) e de dimensionar corretamente os sistemas de energia. Assim como as <strong>smart grids</strong> terrestres equilibram oferta e demanda de energia em tempo real (Souza et al., 2020), os sistemas de uma nave espacial precisam fazer o mesmo em condições muito mais restritas.</p>
-<p>A convergência entre engenharia elétrica, ciência da computação e sustentabilidade — tema central da Fase I — se manifesta diretamente na construção de sistemas espaciais que devem ser energeticamente eficientes, confiáveis e sustentáveis a longo prazo. O princípio de Green IT, discutido no Cap. 8, nos lembra que toda tecnologia deve ser concebida considerando seu ciclo de vida completo e seu impacto ambiental.</p>
+<h2 id="1.6-Reflex%C3%A3o-Cr%C3%ADtica">1.6 Reflexão Crítica<a class="anchor-link" href="#1.6-Reflex%C3%A3o-Cr%C3%ADtica">¶</a></h2><h3 id="%C3%89tica-e-Responsabilidade-na-Automa%C3%A7%C3%A3o-de-Decis%C3%B5es-Espaciais">Ética e Responsabilidade na Automação de Decisões Espaciais<a class="anchor-link" href="#%C3%89tica-e-Responsabilidade-na-Automa%C3%A7%C3%A3o-de-Decis%C3%B5es-Espaciais">¶</a></h3><p>A automação de decisões críticas em missões espaciais — como a verificação pré-decolagem simulada neste projeto — levanta questões éticas, legais e sociais (ELSI - <em>Ethical, Legal, and Societal Implications</em>) de grande profundidade. Quando um algoritmo decide entre "PRONTO PARA DECOLAR" e "DECOLAGEM ABORTADA", essa decisão impacta diretamente a segurança de vidas humanas e o sucesso de missões bilionárias.</p>
+<p>A NASA reconhece formalmente essa responsabilidade. Em 2023, o <em>Office of Technology, Policy, and Strategy</em> (OTPS) organizou o workshop <strong>"Artemis, Ethics and Society"</strong>, reunindo 55 participantes de diversas áreas — historiadores, filósofos, sociólogos, advogados e engenheiros — para mapear as implicações éticas do programa Artemis e da arquitetura Moon to Mars (Pirtle, McBrayer &amp; Beauchemin, 2023). O workshop identificou cinco temas centrais:</p>
+<ol>
+<li><strong>Compartilhamento dos benefícios</strong> da exploração espacial com toda a humanidade</li>
+<li><strong>Reflexão sobre valores fundamentais</strong> que guiam a exploração</li>
+<li><strong>Definição de sustentabilidade</strong> no contexto lunar e marciano</li>
+<li><strong>Equilíbrio no acesso compartilhado</strong> à superfície lunar</li>
+<li><strong>Sensibilidades culturais</strong> em torno de atividades e cargas lunares</li>
+</ol>
+<p>Esses temas se conectam diretamente ao nosso projeto: o sistema de verificação pré-decolagem deve ser <strong>transparente e auditável</strong>, com critérios documentados publicamente. A confiança em sistemas automatizados precisa ser construída sobre testes rigorosos, validação cruzada e supervisão humana permanente. Conforme destacado no workshop da NASA, organizações espaciais frequentemente priorizam a eficiência sobre a reflexão cuidadosa, mas sistemas críticos exigem que ambas coexistam.</p>
+<p>Os <strong>Acordos Artemis</strong> (<em>Artemis Accords</em>), estabelecidos em 2020 pelos EUA e outras nações signatárias, reforçam os princípios de: exploração pacífica, transparência, interoperabilidade, assistência emergencial, registro de objetos espaciais, liberação de dados científicos, preservação de patrimônio, utilização de recursos espaciais, desconflição de atividades e mitigação de detritos orbitais (NASA, 2024). Esses princípios criam um ambiente de confiança e cooperação internacional essencial para a exploração sustentável.</p>
+<h3 id="Governan%C3%A7a-Global-e-Atividades-Lunares-Sustent%C3%A1veis">Governança Global e Atividades Lunares Sustentáveis<a class="anchor-link" href="#Governan%C3%A7a-Global-e-Atividades-Lunares-Sustent%C3%A1veis">¶</a></h3><p>Em junho de 2024, a <strong>Conferência das Nações Unidas sobre Atividades Lunares Sustentáveis</strong> (UNOOSA), realizada no Vienna International Centre, reuniu chefes de agências espaciais, especialistas científicos, juristas e representantes do setor privado para discutir a governança das operações lunares em expansão (UNOOSA, 2024). A conferência teve como objetivo central fomentar uma discussão significativa sobre cooperação lunar e identificar caminhos potenciais para a coordenação global como requisito fundamental para atividades lunares sustentáveis no futuro.</p>
+<p>Os debates foram organizados em cinco sessões temáticas:</p>
+<ol>
+<li><strong>Coordenação e Comunicação</strong> — desenvolvimento de sistemas robustos de comunicação entre países que conduzem atividades na superfície e em órbita lunar, e o papel facilitador da ONU</li>
+<li><strong>Perspectivas Comerciais</strong> — parcerias público-privadas e abordagens de empresas comerciais para implementar coordenação segura de operações lunares</li>
+<li><strong>Atividades Lunares Futuras</strong> — apresentações de signatários dos Acordos Artemis e participantes do programa <em>International Lunar Research Station</em> (ILRS)</li>
+<li><strong>Abordagens para Cooperação</strong> — discussão sobre padrões comportamentais, incluindo aspectos legais e regulatórios</li>
+<li><strong>Workshop de Padrões de Comportamento</strong> — identificação de terreno comum sobre padrões de conduta consensuais para atividades lunares</li>
+</ol>
+<p>Participaram agências espaciais como NASA, JAXA, CNSA, ISRO, ESA, Roscosmos, além de agências nacionais da Coreia, Alemanha, Emirados Árabes, Paquistão, Brasil, África do Sul e Egito. O setor privado foi representado por empresas como ispace-US, Intuitive Machines, Blue Origin, Redwire Space e o European Space Resources Innovation Centre (ESRIC). A conferência reafirmou o princípio fundamental do Tratado do Espaço Exterior: a exploração e o uso do espaço "devem ser realizados em benefício e no interesse de todos os países".</p>
+<h3 id="A-Abordagem-Europeia:-Explora%C3%A7%C3%A3o-Sustent%C3%A1vel-segundo-a-ESA">A Abordagem Europeia: Exploração Sustentável segundo a ESA<a class="anchor-link" href="#A-Abordagem-Europeia:-Explora%C3%A7%C3%A3o-Sustent%C3%A1vel-segundo-a-ESA">¶</a></h3><p>A Agência Espacial Europeia (ESA) adota uma filosofia prática de sustentabilidade espacial centrada na ideia de que "explorar novos mundos requer levar ou encontrar os recursos para manter os humanos vivos" por meio de reciclagem e utilização de recursos, em vez de transportar tudo a partir da Terra (ESA, 2024).</p>
+<p>A estratégia da ESA se apoia em três pilares:</p>
+<ul>
+<li><strong>Parcerias comerciais</strong>: modelo baseado em mercado, buscando contratar pousos comerciais para entrega de equipamentos de pesquisa e serviços de comunicação, reduzindo custos de desenvolvimento</li>
+<li><strong>Utilização de recursos in situ (ISRU)</strong>: prioridade no desenvolvimento de tecnologias para converter matérias-primas locais (regolito lunar, gelo de água) em oxigênio e água — suprimentos essenciais para operações em espaço profundo</li>
+<li><strong>Investimento em infraestrutura</strong>: tecnologias habilitadoras para ISRU e novos modelos de negócios espaciais</li>
+</ul>
+<p>Um destaque é o programa <strong>MELiSSA</strong> (<em>Micro-Ecological Life Support System Alternative</em>), com mais de 25 anos de investimento em ecossistemas portáteis de ciclo fechado. Uma instalação de testes em Barcelona mantém organismos em um ecossistema fechado, utilizando micróbios, algas, bactérias e plantas para processar resíduos em oxigênio, água e alimentos — um primeiro passo rumo a sistemas que poderiam sustentar humanos no espaço. A ESA também destaca a <strong>transferência dual de conhecimento</strong>: técnicas de cultivo de algas apoiam a produção de alimentos no Congo e avançam o desenvolvimento de biocombustíveis globalmente.</p>
+<h3 id="Impacto-Social-e-Sustentabilidade-Espacial">Impacto Social e Sustentabilidade Espacial<a class="anchor-link" href="#Impacto-Social-e-Sustentabilidade-Espacial">¶</a></h3><p>A exploração espacial vai além da fronteira científica. A NASA define <strong>sustentabilidade espacial</strong> como "a capacidade de manter a condução de atividades espaciais indefinidamente no futuro, de maneira segura, pacífica e responsável, atendendo às necessidades das gerações presentes enquanto preserva o ambiente espacial para atividades futuras e limita danos à vida terrestre" (NASA Space Sustainability Strategy, 2024).</p>
+<p>Essa definição evidencia um paralelo direto com o conceito de desenvolvimento sustentável terrestre. A estratégia de sustentabilidade espacial da NASA identificou cinco desafios-chave:</p>
+<ul>
+<li>Não existe um framework único aceito pela comunidade espacial para avaliar sustentabilidade</li>
+<li>Métricas e modelos atuais são insuficientes para apoiar frameworks holísticos</li>
+<li>Incertezas no ambiente espacial são fatores de risco para a sustentabilidade</li>
+<li>Sustentabilidade pode conflitar com outros interesses de missão</li>
+<li>Sustentabilidade espacial é uma questão global que requer resposta multilateral coordenada</li>
+</ul>
+<p>Palmroth &amp; Hukkinen (2025), em artigo publicado na <em>Ecology and Society</em>, alertam que a expansão do uso do espaço representa simultaneamente uma <strong>oportunidade para a sustentabilidade</strong> terrestre e uma <strong>ameaça à resiliência</strong>. Tecnologias baseadas em satélites — como monitoramento climático, comunicações, navegação e observação terrestre — são infraestrutura crítica para a transição verde e digital. Porém, essas mesmas infraestruturas ficam vulneráveis a eventos climáticos espaciais extremos (<em>space weather</em>), como tempestades geomagnéticas do tipo Carrington, que poderiam causar cortes globais de eletricidade, falhas em redes de comunicação e perda de satélites.</p>
+<p>O crescimento exponencial de objetos em órbita terrestre baixa (LEO) — de menos de 5.000 nos anos 1960 para mais de 25.000 rastreáveis atualmente — agrava o problema dos detritos orbitais. A análise de custo-benefício de remediação de detritos orbitais da NASA (2024) demonstra que a limpeza ativa é necessária, mas enfrenta desafios técnicos e econômicos significativos.</p>
+<h3 id="Sustentabilidade-Tecnol%C3%B3gica-e-Efici%C3%AAncia-Energ%C3%A9tica">Sustentabilidade Tecnológica e Eficiência Energética<a class="anchor-link" href="#Sustentabilidade-Tecnol%C3%B3gica-e-Efici%C3%AAncia-Energ%C3%A9tica">¶</a></h3><p>Conforme estudado no Cap. 7 do material da FIAP, a eficiência energética é pilar fundamental de qualquer empreendimento tecnológico. Na exploração espacial, a gestão eficiente da energia não é apenas uma questão de custo, mas de <strong>sobrevivência da missão</strong>.</p>
+<p>Os cálculos de autonomia energética realizados neste projeto (seção 1.4) demonstram a importância de considerar perdas por dissipação térmica (2ª Lei da Termodinâmica) e de dimensionar corretamente os sistemas de energia. Assim como as <strong>smart grids</strong> terrestres equilibram oferta e demanda de energia em tempo real, os sistemas de uma nave espacial precisam fazer o mesmo em condições muito mais restritas.</p>
+<p>Santomartino et al. (2023), em artigo publicado na <em>Nature Communications</em>, propõem um roteiro para exploração espacial sustentável baseado em <strong>biotecnologias microbianas</strong>: biorremediação de ar em habitats, produção de alimentos, síntese farmacêutica, biomineração de recursos in situ, biomanufatura de materiais de construção, coleta e armazenamento biológico de energia, e reciclagem de resíduos eletrônicos. O conceito de <strong>loop-closure</strong> (economia circular espacial) — reciclagem e reutilização de recursos para reduzir a dependência de reabastecimento terrestre — é fundamental para missões de longa duração à Lua e Marte. Esse conceito dialoga diretamente com o programa MELiSSA da ESA e com a visão de bases lunares autossustentáveis.</p>
+<p>A convergência entre engenharia, ciência da computação e sustentabilidade — tema central da Fase I — se manifesta diretamente na construção de sistemas espaciais que devem ser energeticamente eficientes, confiáveis e sustentáveis a longo prazo. O princípio de <strong>Green IT</strong>, discutido no Cap. 8 do material da FIAP, nos lembra que toda tecnologia deve ser concebida considerando seu ciclo de vida completo e seu impacto ambiental.</p>
+<h3 id="Refer%C3%AAncias-da-Se%C3%A7%C3%A3o-1.6">Referências da Seção 1.6<a class="anchor-link" href="#Refer%C3%AAncias-da-Se%C3%A7%C3%A3o-1.6">¶</a></h3><ul>
+<li>NASA (2024). <em>Responsible Exploration: Ethical, Legal, and Societal Implications of the Artemis Campaign and NASA's Moon to Mars Architecture</em>. Moon to Mars Architecture Concept Review.</li>
+<li>Pirtle, Z., McBrayer, K. &amp; Beauchemin, A. (2023). <em>Artemis, Ethics and Society: Synthesis from a Workshop</em>. NASA OTPS, Report ID 20230012799.</li>
+<li>NASA (2024). <em>Space Sustainability Strategy, Volume 1: Earth Orbit</em>.</li>
+<li>Palmroth, M. &amp; Hukkinen, J. I. (2025). Expanding use of space is an opportunity for sustainability but a threat to resilience. <em>Ecology and Society</em>, 30(2):6.</li>
+<li>Santomartino, R. et al. (2023). Toward sustainable space exploration: a roadmap for harnessing the power of microorganisms. <em>Nature Communications</em>, 14:1391.</li>
+<li>NASA (2024). <em>Cost and Benefit Analysis of Orbital Debris Remediation</em>.</li>
+<li>UNOOSA (2024). <em>Conference on Sustainable Lunar Activities</em>. Vienna International Centre, 18 June 2024.</li>
+<li>ESA (2024). <em>Sustainable Exploration</em>. European Space Agency — Human and Robotic Exploration.</li>
+<li>Material didático FIAP — Fase I: Cap. 6, Cap. 7, Cap. 8.</li>
+</ul>
 <hr/>
 <p><em>Projeto desenvolvido como parte da Atividade Integradora da Fase I — Decolagem da Missão, Ciências da Computação — FIAP (2026)</em></p>
 </div>
